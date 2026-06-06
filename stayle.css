@@ -53,6 +53,8 @@ html {
   -webkit-overflow-scrolling: touch;
   font-size: 16px;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -61,6 +63,9 @@ body {
   font-family: 'DM Sans', 'Open Sans', sans-serif;
   line-height: 1.7;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
 }
 
 /* Import Syne for headings via Google Fonts (already loaded in HTML, adding fallback stack) */
