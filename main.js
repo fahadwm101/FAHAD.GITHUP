@@ -378,7 +378,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setTimeout(() => {
     loadingScreen.style.opacity = '0';
-    setTimeout(() => loadingScreen.style.display='none', 100);
+    setTimeout(() => {
+      loadingScreen.style.display='none';
+      window.dispatchEvent(new Event('scroll'));
+    }, 100);
     if (mainPage) mainPage.classList.add("visible");
   }, 500);
 });
