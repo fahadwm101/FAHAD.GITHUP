@@ -287,6 +287,7 @@ function toggleLanguage() {
   const currentLang = localStorage.getItem('preferredLanguage') || 'en';
   const newLang = currentLang === 'en' ? 'ar' : 'en';
   updateLanguage(newLang);
+  closeMobileMenu();
 }
 
 // ======================== TYPEWRITER EFFECT ========================
