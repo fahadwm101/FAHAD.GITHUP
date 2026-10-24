@@ -69,6 +69,17 @@
             <span class="home-s"></span>
             <span data-i18n="hero-badge">Open for Senior Opportunities & Consulting</span>
         </div>
+
+        <!-- Live Clock & Availability Status (Feature 4) -->
+        <div class="live-clock-badge">
+            <span class="live-dot"></span>
+            <span class="live-city" data-i18n="live-location">Karbala, Iraq</span>
+            <span class="live-sep">•</span>
+            <span class="live-time" id="live-time">--:-- -- (UTC+3)</span>
+            <span class="live-sep">•</span>
+            <span class="live-status" data-i18n="live-status">Open for Work & Consulting</span>
+        </div>
+
         <div class="home-container">
             <div class="home-section">
                 <div class="info-home">
@@ -120,6 +131,38 @@
                         <p data-i18n="about-p1">Specializing in product engineering and building robust productivity ecosystems. My approach combines deep algorithmic knowledge with modern web standards to deliver high-impact user experiences.</p>
                         <p data-i18n="about-p2">Leveraging a Computer Science degree from the University of Karbala, I integrate low-level programming principles (C++, Python) into high-level frontend architectures, ensuring every line of code is optimized for scale.</p>
                     </div>
+
+                    <!-- Developer Terminal Box (Feature 5) -->
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="terminal-title">cheetah@karbala:~</div>
+                            <div class="terminal-action">bash</div>
+                        </div>
+                        <div class="terminal-body" id="terminal-body">
+                            <div class="terminal-line"><span class="prompt">cheetah@karbala:~$</span> <span class="cmd">fahad.inspect()</span></div>
+                            <div class="terminal-output">
+                                <span class="out-key">role:</span> <span class="out-str">"Senior Frontend Specialist | Architect"</span><br>
+                                <span class="out-key">location:</span> <span class="out-str">"Karbala, Iraq"</span><br>
+                                <span class="out-key">education:</span> <span class="out-str">"B.Sc. Computer Science (Univ. of Karbala)"</span><br>
+                                <span class="out-key">coreStack:</span> <span class="out-arr">["React", "TypeScript", "Next.js", "Python", "Tailwind"]</span><br>
+                                <span class="out-key">availability:</span> <span class="out-green">"Available for High-Impact Projects"</span>
+                            </div>
+                            <div class="terminal-line"><span class="prompt">cheetah@karbala:~$</span> <span class="cursor">|</span></div>
+                        </div>
+                        <div class="terminal-quick-cmds">
+                            <span class="terminal-quick-label">Execute:</span>
+                            <button type="button" class="term-btn" onclick="runTerminalCmd('stack')" data-i18n="term-btn-stack">--stack</button>
+                            <button type="button" class="term-btn" onclick="runTerminalCmd('bio')" data-i18n="term-btn-bio">--bio</button>
+                            <button type="button" class="term-btn" onclick="runTerminalCmd('contact')" data-i18n="term-btn-contact">--contact</button>
+                            <button type="button" class="term-btn" onclick="runTerminalCmd('clear')" data-i18n="term-btn-clear">--clear</button>
+                        </div>
+                    </div>
+
                     <h2 data-i18n="about-core">Core Competencies</h2>
                     <div class="card">
                         <div class="c1">
@@ -150,11 +193,19 @@
             <p data-i18n="projects-p2">using modern frontend engineering, real-time data sync, and robust problem-solving.</p>
         </div>
 
+        <!-- Project Filter Tabs (Feature 1) -->
+        <div class="project-filters">
+            <button type="button" class="filter-btn active" data-filter="all" data-i18n="filter-all">All (9)</button>
+            <button type="button" class="filter-btn" data-filter="web" data-i18n="filter-web">Web Apps</button>
+            <button type="button" class="filter-btn" data-filter="system" data-i18n="filter-system">Systems & Dashboards</button>
+            <button type="button" class="filter-btn" data-filter="tool" data-i18n="filter-tool">Tools & Games</button>
+        </div>
+
         <!-- Primary Featured Projects Grid (Always Visible) -->
         <div class="projects-container">
 
             <!-- 1. R.NOTE (RISE Featured) -->
-            <div class="project-card">
+            <div class="project-card" data-category="web">
                 <span class="featured-badge"><i class="fa-solid fa-star"></i> Featured System</span>
                 <img src="images/r_note.png" alt="R.NOTE Project" loading="lazy">
                 <h3 data-i18n="project1-title">R.NOTE - Personalized Student Productivity Hub</h3>
@@ -175,7 +226,7 @@
             </div>
 
             <!-- 2. Cura (Healthcare Platform) -->
-            <div class="project-card">
+            <div class="project-card" data-category="system">
                 <span class="featured-badge"><i class="fa-solid fa-star"></i> Healthcare Platform</span>
                 <img src="images/cura.png" alt="Cura Healthcare Project" loading="lazy">
                 <h3 data-i18n="project2-title">Cura (كيورا) - Healthcare Scheduling & Management Platform</h3>
@@ -196,7 +247,7 @@
             </div>
 
             <!-- 3. APEX (Smart Athletic Training & Analytics) -->
-            <div class="project-card">
+            <div class="project-card" data-category="system">
                 <span class="featured-badge"><i class="fa-solid fa-star"></i> Athletic Dashboard</span>
                 <img src="images/apex.png" alt="APEX Platform" loading="lazy">
                 <h3 data-i18n="project-apex-title">APEX - Smart Athletic Training & Analytics</h3>
@@ -218,7 +269,7 @@
             </div>
 
             <!-- 4. R.I.S.E OS Assistant -->
-            <div class="project-card">
+            <div class="project-card" data-category="tool">
                 <span class="featured-badge"><i class="fa-solid fa-star"></i> Desktop Agent</span>
                 <img src="images/P4.jpg" alt="R.I.S.E OS Assistant" loading="lazy">
                 <h3 data-i18n="project6-title">R.I.S.E OS Assistant</h3>
@@ -243,7 +294,7 @@
         <div class="projects-more" id="projects-more">
 
             <!-- 5. The Finals Loadout -->
-            <div class="project-card">
+            <div class="project-card" data-category="tool">
                 <img src="images/finals.png" alt="The Finals Loadout" loading="lazy">
                 <h3 data-i18n="project-finals-title">The Finals Loadout - Community Gaming Engine</h3>
                 <p data-i18n="project-finals-p">An intelligent algorithmic loadout randomizer designed to simulate the in-game aesthetic with reactive state management.</p>
@@ -262,7 +313,7 @@
             </div>
 
             <!-- 6. Stackbase -->
-            <div class="project-card">
+            <div class="project-card" data-category="web">
                 <img src="images/stackbase.png" alt="Stackbase" loading="lazy">
                 <h3 data-i18n="project-stackbase-title">Stackbase - Developer Knowledge & Directory Hub</h3>
                 <p data-i18n="project-stackbase-p">A curated directory indexing indispensable developer tools, resources, and APIs in a unified, searchable portal.</p>
@@ -281,7 +332,7 @@
             </div>
 
             <!-- 7. Sarb (سرب) -->
-            <div class="project-card">
+            <div class="project-card" data-category="tool">
                 <img src="images/sarb.png" alt="Sarb Typing Game" loading="lazy">
                 <h3 data-i18n="project-sarb-title">Sarb (سرب) - Arabic Fast Typing Competitive Game</h3>
                 <p data-i18n="project-sarb-p">An interactive competitive platform to master Arabic touch typing across 500+ dynamic challenge levels.</p>
@@ -300,7 +351,7 @@
             </div>
 
             <!-- 8. Birthday App -->
-            <div class="project-card">
+            <div class="project-card" data-category="web">
                 <img src="images/birthday.png" alt="Birthday App" loading="lazy">
                 <h3 data-i18n="project-birthday-title">Birthday App - Interactive Web Celebration Experience</h3>
                 <p data-i18n="project-birthday-p">An interactive greeting platform featuring festive animations, dynamic soundscapes, and delightful micro-interactions.</p>
@@ -319,7 +370,7 @@
             </div>
 
             <!-- 9. NeuroSing Website -->
-            <div class="project-card">
+            <div class="project-card" data-category="web">
                 <img src="images/Cleveroad.png" alt="NeuroSing Website" loading="lazy">
                 <h3 data-i18n="project3-title">NeuroSing Website</h3>
                 <p data-i18n="project3-p">Modern online store with product filtering, cart, and payment system.</p>
@@ -408,6 +459,21 @@
                     </a>
                     <a href="https://wa.me/9647824791185" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                <!-- Quick WhatsApp Direct Chat Box (Feature 6) -->
+                <div class="quick-whatsapp-box">
+                    <div class="whatsapp-info">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <h4 data-i18n="whatsapp-title">Quick WhatsApp Discussion</h4>
+                            <p data-i18n="whatsapp-subtitle">Start a direct chat with a prefilled message.</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/9647824791185" id="whatsapp-quick-btn" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span data-i18n="whatsapp-btn">Chat on WhatsApp</span>
                     </a>
                 </div>
             </div>

@@ -116,7 +116,22 @@ const translations = {
     "hero-btn-resume": "View Resume",
     "hero-follow": "Professional Networks:",
     "contact-location": "Iraq, Karbala",
-    "toast-success": "Thank you! Your inquiry has been prepared."
+    "toast-success": "Thank you! Your inquiry has been prepared.",
+
+    // Live Clock & Filters & WhatsApp
+    "live-location": "Karbala, Iraq",
+    "live-status": "Open for Work & Consulting",
+    "filter-all": "All (9)",
+    "filter-web": "Web Apps",
+    "filter-system": "Systems & Dashboards",
+    "filter-tool": "Tools & Games",
+    "whatsapp-title": "Quick WhatsApp Discussion",
+    "whatsapp-subtitle": "Start a direct chat with a prefilled message.",
+    "whatsapp-btn": "Chat on WhatsApp",
+    "term-btn-stack": "--stack",
+    "term-btn-contact": "--contact",
+    "term-btn-bio": "--bio",
+    "term-btn-clear": "--clear"
   },
   ar: {
     "nav-home": "الرئيسية",
@@ -229,7 +244,22 @@ const translations = {
     "hero-btn-resume": "عرض السيرة الذاتية",
     "hero-follow": "الشبكات المهنية:",
     "contact-location": "العراق، كربلاء",
-    "toast-success": "شكراً لك! تم تجهيز استفسارك بنجاح."
+    "toast-success": "شكراً لك! تم تجهيز استفسارك بنجاح.",
+
+    // Live Clock & Filters & WhatsApp
+    "live-location": "العراق، كربلاء",
+    "live-status": "متاح للمشاريع والاستشارات",
+    "filter-all": "الكل (9)",
+    "filter-web": "تطبيقات الويب",
+    "filter-system": "الأنظمة ولوحات التحكم",
+    "filter-tool": "الأدوات والألعاب",
+    "whatsapp-title": "محادثة فورية عبر واتساب",
+    "whatsapp-subtitle": "تواصل معي مباشرة برسالة جاهزة بضغطة زر.",
+    "whatsapp-btn": "مراسلة عبر واتساب",
+    "term-btn-stack": "--التقنيات",
+    "term-btn-contact": "--التواصل",
+    "term-btn-bio": "--السيرة",
+    "term-btn-clear": "--مسح"
   }
 };
 
@@ -279,6 +309,10 @@ function updateLanguage(lang) {
   wordIndex = 0;
   charIndex = 0;
   isDeleting = false;
+
+  // Update dynamic links & clock language
+  updateWhatsAppLink();
+  updateLiveClock();
 
   localStorage.setItem('preferredLanguage', lang);
 }
@@ -400,6 +434,135 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     }
   });
 });
+
+// ======================== LIVE CLOCK & AVAILABILITY (FEATURE 4) ========================
+function updateLiveClock() {
+  const clockEl = document.getElementById('live-time');
+  if (!clockEl) return;
+  const now = new Date();
+  const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+  const options = {
+    timeZone: 'Asia/Baghdad',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true
+  };
+  clockEl.textContent = now.toLocaleTimeString(currentLang === 'ar' ? 'ar-IQ' : 'en-US', options) + ' (UTC+3)';
+}
+setInterval(updateLiveClock, 1000);
+
+// ======================== WHATSAPP DIRECT CHAT (FEATURE 6) ========================
+function updateWhatsAppLink() {
+  const btn = document.getElementById('whatsapp-quick-btn');
+  if (!btn) return;
+  const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+  const msg = currentLang === 'ar'
+    ? 'مرحباً فهد، اطلعت على معرض أعمالك وأرغب في مناقشة فرصة عمل/مشروع.'
+    : 'Hi Fahad, I saw your portfolio and would like to discuss an opportunity.';
+  btn.href = `https://wa.me/9647824791185?text=${encodeURIComponent(msg)}`;
+}
+
+// ======================== DEVELOPER TERMINAL BOX (FEATURE 5) ========================
+function runTerminalCmd(cmd) {
+  const terminalBody = document.getElementById('terminal-body');
+  if (!terminalBody) return;
+
+  if (cmd === 'clear') {
+    terminalBody.innerHTML = `
+      <div class="terminal-line"><span class="prompt">cheetah@karbala:~$</span> <span class="cmd">clear</span></div>
+      <div class="terminal-line"><span class="prompt">cheetah@karbala:~$</span> <span class="cursor">|</span></div>
+    `;
+    return;
+  }
+
+  // Remove trailing cursor line
+  const lastLine = terminalBody.querySelector('.terminal-line:last-child');
+  if (lastLine && lastLine.innerHTML.includes('cursor')) {
+    lastLine.remove();
+  }
+
+  let outputHTML = '';
+  if (cmd === 'stack') {
+    outputHTML = `
+      <div class="terminal-line"><span class="prompt">cheetah@karbala:~$</span> <span class="cmd">fahad --stack</span></div>
+      <div class="terminal-output">
+        <span class="out-key">languages:</span> <span class="out-str">["JavaScript (ES6+)", "TypeScript", "Python", "C++"]</span><br>
+        <span class="out-key">frameworks:</span> <span class="out-arr">["React", "Next.js", "Tailwind CSS", "Redux/Zustand"]</span><br>
+        <span class="out-key">backend&cloud:</span> <span class="out-str">["Node.js", "Firebase/Firestore", "REST APIs", "Cloudflare"]</span><br>
+        <span class="out-key">engineering:</span> <span class="out-green">["Component Systems", "Real-Time Sync", "Web Performance"]</span>
+      </div>
+    `;
+  } else if (cmd === 'contact') {
+    outputHTML = `
+      <div class="terminal-line"><span class="prompt">cheetah@karbala:~$</span> <span class="cmd">fahad --contact</span></div>
+      <div class="terminal-output">
+        <span class="out-key">email:</span> <span class="out-str">"fhadwatek@gmail.com"</span><br>
+        <span class="out-key">telegram:</span> <span class="out-arr">"https://t.me/bfa7_7"</span><br>
+        <span class="out-key">whatsapp:</span> <span class="out-green">"+964 782 479 1185"</span><br>
+        <span class="out-key">github:</span> <span class="out-str">"github.com/fahadwm101"</span>
+      </div>
+    `;
+  } else if (cmd === 'bio') {
+    outputHTML = `
+      <div class="terminal-line"><span class="prompt">cheetah@karbala:~$</span> <span class="cmd">fahad --bio</span></div>
+      <div class="terminal-output">
+        <span class="out-key">name:</span> <span class="out-str">"Fahad Wathiq (CHEETAH)"</span><br>
+        <span class="out-key">education:</span> <span class="out-str">"B.Sc. Computer Science - University of Karbala"</span><br>
+        <span class="out-key">specialty:</span> <span class="out-arr">"Frontend Architecture & Product Engineering"</span><br>
+        <span class="out-key">status:</span> <span class="out-green">"Available for High-Impact Projects"</span>
+      </div>
+    `;
+  }
+
+  terminalBody.innerHTML += outputHTML + `
+    <div class="terminal-line"><span class="prompt">cheetah@karbala:~$</span> <span class="cursor">|</span></div>
+  `;
+  terminalBody.scrollTop = terminalBody.scrollHeight;
+}
+
+// Make runTerminalCmd available globally for button onclick
+window.runTerminalCmd = runTerminalCmd;
+
+// ======================== PROJECT FILTER TABS (FEATURE 1) ========================
+function initProjectFilters() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const allCards = document.querySelectorAll('.project-card');
+  const toggleBtnContainer = document.querySelector('.projects-actions');
+  const projectsMore = document.getElementById('projects-more');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+
+      if (filter === 'all') {
+        allCards.forEach(card => {
+          card.classList.remove('filtered-out', 'filtered-in');
+        });
+        if (toggleBtnContainer) toggleBtnContainer.style.display = 'flex';
+      } else {
+        if (toggleBtnContainer) toggleBtnContainer.style.display = 'none';
+        if (projectsMore) projectsMore.classList.add('expanded');
+
+        allCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (category === filter) {
+            card.classList.remove('filtered-out');
+            card.classList.add('filtered-in');
+          } else {
+            card.classList.remove('filtered-in');
+            card.classList.add('filtered-out');
+          }
+        });
+      }
+
+      window.dispatchEvent(new Event('scroll'));
+    });
+  });
+}
 
 // ======================== PROJECTS TOGGLE (VIEW ALL / SHOW LESS) ========================
 const toggleProjectsBtn = document.getElementById('toggle-projects-btn');
@@ -540,6 +703,9 @@ document.addEventListener('DOMContentLoaded', () => {
   updateLanguage(savedLang);
 
   type();
+  initProjectFilters();
+  updateLiveClock();
+  updateWhatsAppLink();
 
   const loadingScreen = document.getElementById('loading-screen');
   const loadingText = document.getElementById('loading-text');
