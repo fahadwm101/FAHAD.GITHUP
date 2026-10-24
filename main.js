@@ -27,43 +27,72 @@ const translations = {
     "about-card2-title": "Education",
     "about-card2-p": "B.Sc. Computer Science – University of Karbala",
     "about-card3-title": "Portfolio",
-    "about-card3-p": "5+ Enterprise-Ready Projects",
-    "projects-subtitle": "CASE STUDIES",
+    "about-card3-p": "9+ Enterprise-Ready Projects",
+    "projects-subtitle": "CASE STUDIES & ARCHIVE",
     "projects-title": "Engineering Portfolio",
     "projects-p1": "A selection of projects where I solved complex architectural challenges",
-    "projects-p2": "using modern frontend engineering and robust problem-solving techniques.",
+    "projects-p2": "using modern frontend engineering, real-time data sync, and robust problem-solving.",
     "project-problem": "The Problem:",
     "project-solution": "The Impact/Solution:",
+
+    // Featured Projects
     "project1-title": "R.NOTE - Personalized Student Productivity Hub",
     "project1-p": "A complex web application designed to optimize the academic experience, gamifying study through prioritized recommendations.",
     "project1-problem-text": "Students struggle with fragmented schedules, disorganization, and low motivation to prioritize tasks.",
     "project1-solution-text": "R.NOTE consolidates assignments, tests, and priority logic into a single intuitive dark-mode dashboard, using gamification (XP) to maintain consistency.",
+
     "project2-title": "Cura (كيورا) - Healthcare Scheduling & Management Platform",
     "project2-p": "A strategic digital solution bridging the operational gap between patients and healthcare facilities.",
     "project2-problem-text": "Healthcare clinics suffer from operational inefficiencies, fragmented scheduling, and poor patient-provider communication, leading to wasted time.",
     "project2-solution-text": "Delivers real-time appointment scheduling, administrative governance, and proactive operational pathways to maximize clinic efficiency and elevate the patient experience.",
+
+    "project-apex-title": "APEX - Smart Athletic Training & Analytics",
+    "project-apex-p": "An integrated athletic dashboard for performance tracking and visual muscle focus analytics with an embedded intelligent coach system.",
+    "project-apex-problem-text": "Athletes lack centralized, visual analytics for muscular strain, personalized tracking, and adaptive coaching.",
+    "project-apex-solution-text": "Engineered a Next.js dashboard featuring real-time data visualization, muscle heatmaps, and Google Play cross-platform integration.",
+
+    "project6-title": "R.I.S.E OS Assistant",
+    "project6-p": "Voice-controlled OS automation program built for high efficiency and hands-free desktop execution.",
+    "project6-problem-text": "Lack of quick accessibility and automation for complex recurring system workflows.",
+    "project6-solution-text": "Specific voice-controlled assistant program built in Python communicating with OS system APIs for task automation.",
+
+    // Additional Projects
+    "project-finals-title": "The Finals Loadout - Community Gaming Engine",
+    "project-finals-p": "An intelligent algorithmic loadout randomizer designed to simulate the in-game aesthetic with reactive state management.",
+    "project-finals-problem-text": "Repetitive gameplay strategies and static loadouts limiting player experimentation.",
+    "project-finals-solution-text": "Built a fast, gamified weapon and ability randomizer with fluid audio-visual feedback and custom UI systems.",
+
+    "project-stackbase-title": "Stackbase - Developer Knowledge & Directory Hub",
+    "project-stackbase-p": "A curated directory indexing indispensable developer tools, resources, and APIs in a unified, searchable portal.",
+    "project-stackbase-problem-text": "Fragmented bookmarks and wasted discovery time for modern engineering libraries and tools.",
+    "project-stackbase-solution-text": "Consolidated hundreds of vetted developer tools into categorized, fast-search index boards.",
+
+    "project-sarb-title": "Sarb (سرب) - Arabic Fast Typing Competitive Game",
+    "project-sarb-p": "An interactive competitive platform to master Arabic touch typing across 500+ dynamic challenge levels.",
+    "project-sarb-problem-text": "Scarcity of engaging, high-standard gamified typing platforms tailored for the Arabic keyboard.",
+    "project-sarb-solution-text": "Developed a gamified typing engine calculating real-time WPM, precision error-tracking, and competitive ranks.",
+
+    "project-birthday-title": "Birthday App - Interactive Web Celebration Experience",
+    "project-birthday-p": "An interactive greeting platform featuring festive animations, dynamic soundscapes, and delightful micro-interactions.",
+    "project-birthday-problem-text": "Traditional greeting messages feel static, impersonal, and forgettable.",
+    "project-birthday-solution-text": "Engineered an immersive celebration page with procedural confetti, interactive gift unpacking, and audio cues.",
+
     "project3-title": "NeuroSing Website",
     "project3-p": "Modern online store with product filtering, cart, and payment system.",
     "project3-problem-text": "Fragmentation in the Neuro-supplies market.",
     "project3-solution-text": "Centralized intelligent commerce platform.",
-    "project4-title": "Enterprise Portfolio",
-    "project4-p": "High-performance professional identity platform for software engineers.",
-    "project4-problem-text": "Inability to communicate true engineering value effectively to global clients.",
-    "project4-solution-text": "Professional strategic positioning tool with high accessibility and sleek interaction.",
-    "project5-title": "Productivity Engine",
-    "project5-p": "An intelligent ecosystem for academic management and AI-assisted task tracking.",
-    "project5-problem-text": "Information overload in traditional note-taking apps leading to decreased user focus.",
-    "project5-solution-text": "Built a modular React-based workspace with integrated AI assistants to automate task prioritization.",
-    "project6-title": "R.I.S.E OS Assistant",
-    "project6-p": "Voice-controlled OS automation program built for efficiency.",
-    "project6-problem-text": "Lack of quick accessibility for complex recurring system workflows.",
-    "project6-solution-text": "Specific voice-controlled assistant program built in Python for desktop automation.",
+
+    // Buttons & Toggles
     "project-btn-live": "Live Demo",
+    "project-btn-play": "Google Play",
     "project-btn-inquiry": "Architecture & Demo",
     "project-btn-arch": "Architecture",
     "project-btn-deploy": "Deployment",
     "project-btn-doc": "Documentation",
     "project-btn-demo": "Demo Info",
+    "projects-toggle-more": "View All Projects (9)",
+    "projects-toggle-less": "Show Featured Projects Only",
+
     "services-subtitle": "CORE SPECIALIZATIONS",
     "services-title": "Engineering Services",
     "service1-title": "Responsive UI/UX Development",
@@ -111,43 +140,72 @@ const translations = {
     "about-card2-title": "التعليم",
     "about-card2-p": "بكالوريوس علوم الحاسوب - جامعة كربلاء",
     "about-card3-title": "المعرض",
-    "about-card3-p": "أكثر من 5 مشاريع جاهزة للمؤسسات",
-    "projects-subtitle": "دراسات الحالة",
+    "about-card3-p": "أكثر من 9 مشاريع جاهزة للمؤسسات",
+    "projects-subtitle": "دراسات الحالة والأرشيف",
     "projects-title": "معرض الهندسة",
     "projects-p1": "مجموعة مختارة من المشاريع حيث قمت بحل تحديات معمارية معقدة",
-    "projects-p2": "باستخدام هندسة الواجهات الأمامية الحديثة وتقنيات حل المشكلات القوية.",
+    "projects-p2": "باستخدام هندسة الواجهات الأمامية الحديثة، والمزامنة اللحظية، وتقنيات حل المشكلات القوية.",
     "project-problem": "المشكلة:",
     "project-solution": "التأثير/الحل:",
+
+    // Featured Projects
     "project1-title": "R.NOTE - مركز إنتاجية الطلاب الشخصي",
     "project1-p": "تطبيق ويب معقد مصمم لتحسين التجربة الأكاديمية، وتحفيز الدراسة من خلال توصيات محددة الأولويات.",
     "project1-problem-text": "يعاني الطلاب من الجداول المشتتة، وعدم التنظيم، وانخفاض الدافع لتحديد أولويات المهام.",
     "project1-solution-text": "يجمع R.NOTE التكليفات والاختبارات ومنطق الأولويات في لوحة تحكم واحدة بديهية تعمل بالوضع الداكن، مع استخدام التحفيز (XP) للحفاظ على الاستمرارية.",
+
     "project2-title": "Cura (كيورا) - منصة جدولة وإدارة الرعاية الصحية",
     "project2-p": "حل رقمي استراتيجي يسد الفجوة التشغيلية بين المرضى ومرافق الرعاية الصحية.",
     "project2-problem-text": "تعاني العيادات الصحية من عدم الكفاءة التشغيلية، والجدولة المجزأة، وضعف التواصل بين المريض ومقدم الخدمة.",
     "project2-solution-text": "يوفر جدولة المواعيد في الوقت الفعلي، والحوكمة الإدارية، والمسارات التشغيلية الاستباقية لزيادة كفاءة العيادة ورفع تجربة المريض.",
-    "project3-title": "متجر NeuroSing الإلكتروني",
-    "project3-p": "متجر إلكتروني حديث مع تصفية المنتجات وسلة التسوق ونظام الدفع.",
-    "project3-problem-text": "التشتت والتجزئة في سوق المستلزمات العصبية والطبية.",
-    "project3-solution-text": "منصة تجارة ذكية مركزية تسهل عمليات الطلب والتصفية الفورية.",
-    "project4-title": "معرض أعمال المؤسسات",
-    "project4-p": "منصة هوية مهنية عالية الأداء لمهندسي البرمجيات.",
-    "project4-problem-text": "صعوبة إبراز القيمة الهندسية والخبرة التقنية الحقيقية للشركات العالمية.",
-    "project4-solution-text": "بناء منصة هوية مهنية استراتيجية بتصميم تفاعلي متقدم وأداء فائق وسرعة وصول عالية.",
-    "project5-title": "محرك الإنتاجية الذكي (Productivity Engine)",
-    "project5-p": "نظام بيئي ذكي للإدارة الأكاديمية وتتبع المهام مدعوم بالذكاء الاصطناعي.",
-    "project5-problem-text": "التشتت وتراكم المهام في تطبيقات الملاحظات التقليدية مما يقلل تركيز المستخدم.",
-    "project5-solution-text": "تطوير مساحة عمل معيارية مبنية بـ React مع مساعدين أذكياء لأتمتة ترتيب الأولويات.",
+
+    "project-apex-title": "APEX - منصة التدريب الرياضي الذكي",
+    "project-apex-p": "لوحة تحكم رياضية متكاملة لتتبع الأداء وتحليل التركيز العضلي ببيانات مرئية (Data Visualization) مع نظام توجيه مدمج للمدرب الذكي.",
+    "project-apex-problem-text": "افتقار الرياضيين لمنصات مرئية ذكية تحلل الجهد العضلي وتقدم مسارات تدريب تفاعلية مخصصة.",
+    "project-apex-solution-text": "بناء لوحة تحكم متقدمة بـ Next.js تعرض خرائط حرارية للعضلات ورسوم بيانية تفاعلية مع توجيه ذكي وتطبيق متاح على Google Play.",
+
     "project6-title": "مساعد نظام التشغيل R.I.S.E",
     "project6-p": "برنامج أتمتة لنظام التشغيل يتم التحكم به صوتياً تم بناؤه لتحقيق أقصى كفاءة.",
     "project6-problem-text": "صعوبة الوصول السريع وأتمتة مسارات العمل المتكررة على النظام.",
     "project6-solution-text": "تطوير مساعد صوتي مخصص باستخدام بايثون للتحكم بأوامر النظام وتنفيذ المهام التلقائية.",
+
+    // Additional Projects
+    "project-finals-title": "The Finals Loadout - أداة مجتمع الألعاب",
+    "project-finals-p": "خوارزمية ذكية لتوليد عتاد عشوائي للاعبين، مبنية بواجهة تفاعلية تحاكي الهوية البصرية للعبة، مع إدارة متقدمة لحالة التطبيق.",
+    "project-finals-problem-text": "تكرار أساليب اللعب والعتاد الثابت مما يقلل الحماس والتجربة التكتيكية للاعبين.",
+    "project-finals-solution-text": "تطوير أداة سريعة لتوليد التشكيلات العشوائية بواجهة تفاعلية ومؤثرات صوتية مطابقة للعبة الأصلية.",
+
+    "project-stackbase-title": "Stackbase - دليل ومكتبة المبرمج الشامل",
+    "project-stackbase-p": "منصة مخصصة لجمع وفهرسة كافة المواقع والأدوات والمصادر التي يحتاجها المبرمج في مكان واحد، لتسهيل الوصول إليها وتعزيز الإنتاجية.",
+    "project-stackbase-problem-text": "تشتت الروابط والمكتبات البرمجية وضياع الوقت في البحث عن الأدوات التقنية الموثوقة.",
+    "project-stackbase-solution-text": "منصة مركزية تفهرس مئات المصادر والأدوات المصنفة بعناية مع بحث فوري وواجهة سريعة.",
+
+    "project-sarb-title": "سرب - لعبة الطباعة السريعة التنافسية",
+    "project-sarb-p": "منصة تعليمية وتنافسية مبتكرة لإتقان الطباعة باللغة العربية عبر أكثر من 500 مستوى تفاعلي مصممة لتحسين السرعة والدقة.",
+    "project-sarb-problem-text": "ندرة المنصات التفاعلية المتطورة المخصصة لتطوير مهارة الطباعة السريعة باللغة العربية.",
+    "project-sarb-solution-text": "محرك طباعة تفاعلي يحسب سرعة الكلمات في الدقيقة (WPM) ومعدل الدقة مع مستويات تدريجية ونظام منافسة.",
+
+    "project-birthday-title": "تطبيق Birthday - تجربة احتفال تفاعلية",
+    "project-birthday-p": "منصة ويب تفاعلية مخصصة للاحتفال، تتميز بتصميم مبهج وحركات بصرية جذابة لتقديم تجربة تهنئة فريدة وغير تقليدية.",
+    "project-birthday-problem-text": "جمود رسائل التهنئة الرقمية التقليدية وافتقارها للتفاعل والمشاعر الخاصة.",
+    "project-birthday-solution-text": "تصميم تجربة ويب غامرة بمؤثرات بصرية احتفالية، وتفاعلات لفتح الهدايا ومؤثرات صوتية مبهجة.",
+
+    "project3-title": "متجر NeuroSing الإلكتروني",
+    "project3-p": "متجر إلكتروني حديث مع تصفية المنتجات وسلة التسوق ونظام الدفع.",
+    "project3-problem-text": "التشتت والتجزئة في سوق المستلزمات العصبية والطبية.",
+    "project3-solution-text": "منصة تجارة ذكية مركزية تسهل عمليات الطلب والتصفية الفورية.",
+
+    // Buttons & Toggles
     "project-btn-live": "عرض حي",
+    "project-btn-play": "Google Play",
     "project-btn-inquiry": "المعمارية والتجربة",
     "project-btn-arch": "المعمارية",
     "project-btn-deploy": "النشر",
     "project-btn-doc": "التوثيق",
     "project-btn-demo": "تفاصيل التجربة",
+    "projects-toggle-more": "عرض كل المشاريع (9)",
+    "projects-toggle-less": "عرض المشاريع البارزة فقط",
+
     "services-subtitle": "التخصصات الجوهرية",
     "services-title": "الخدمات الهندسية",
     "service1-title": "تطوير واجهات UI/UX استجابية",
@@ -263,7 +321,7 @@ function type() {
       wordIndex = (wordIndex + 1) % currentWords.length;
       typingTimeout = setTimeout(type, 500);
     } else {
-      typingTimeout = setTimeout(type, 1500); // Wait before starting to erase
+      typingTimeout = setTimeout(type, 1500);
     }
   }
 }
@@ -308,7 +366,6 @@ if (menuOverlay) {
   menuOverlay.addEventListener('click', closeMobileMenu);
 }
 
-// Close menu when clicking on navigation links
 document.querySelectorAll('.ul-list a').forEach(link => {
   link.addEventListener('click', closeMobileMenu);
 });
@@ -342,6 +399,46 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     }
   });
 });
+
+// ======================== PROJECTS TOGGLE (VIEW ALL / SHOW LESS) ========================
+const toggleProjectsBtn = document.getElementById('toggle-projects-btn');
+const projectsMore = document.getElementById('projects-more');
+
+if (toggleProjectsBtn && projectsMore) {
+  toggleProjectsBtn.addEventListener('click', () => {
+    const isExpanded = projectsMore.classList.contains('expanded');
+    const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+    const textSpan = toggleProjectsBtn.querySelector('span');
+
+    if (isExpanded) {
+      projectsMore.classList.remove('expanded');
+      toggleProjectsBtn.classList.remove('active');
+      if (textSpan) {
+        textSpan.textContent = translations[currentLang]["projects-toggle-more"];
+        textSpan.setAttribute('data-i18n', 'projects-toggle-more');
+      }
+
+      // Scroll smoothly back to projects section top
+      const projectSec = document.getElementById('project');
+      if (projectSec) {
+        window.scrollTo({
+          top: projectSec.offsetTop - 70,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      projectsMore.classList.add('expanded');
+      toggleProjectsBtn.classList.add('active');
+      if (textSpan) {
+        textSpan.textContent = translations[currentLang]["projects-toggle-less"];
+        textSpan.setAttribute('data-i18n', 'projects-toggle-less');
+      }
+
+      // Trigger scroll event to reveal any freshly visible items
+      window.dispatchEvent(new Event('scroll'));
+    }
+  });
+}
 
 // ======================== BACK TO TOP ========================
 const backToTop = document.createElement('div');
@@ -426,12 +523,10 @@ if (contactForm) {
 
     showToast(successMsg);
 
-    // Prepare mailto link as fallback so message is never lost
     const mailtoSubject = encodeURIComponent(`Inquiry from ${name} via Portfolio`);
     const mailtoBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
     const mailtoUrl = `mailto:fhadwatek@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
-    // Open mailto link cleanly
     window.location.href = mailtoUrl;
 
     contactForm.reset();
@@ -440,14 +535,11 @@ if (contactForm) {
 
 // ======================== INITIALIZATION & LOADER ========================
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Language init
   const savedLang = localStorage.getItem('preferredLanguage') || 'en';
   updateLanguage(savedLang);
 
-  // 2. Start Typewriter
   type();
 
-  // 3. Loading Screen
   const loadingScreen = document.getElementById('loading-screen');
   const loadingText = document.getElementById('loading-text');
   const mainIcon = document.querySelector('.main-icon');
@@ -470,7 +562,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   showLoadingElement(designerText, 450);
 
-  // Smooth dismiss loader
   setTimeout(() => {
     if (loadingScreen) {
       loadingScreen.classList.add('fade-out');

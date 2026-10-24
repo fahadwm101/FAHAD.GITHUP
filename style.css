@@ -942,6 +942,92 @@ hr {
   background: var(--primary-glow);
 }
 
+/* Projects Expand / Toggle Styles */
+.projects-more {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  max-width: 1140px;
+  margin: 24px auto 0;
+  width: 100%;
+}
+
+.projects-more.expanded {
+  display: grid;
+  animation: expandFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes expandFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projects-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.btn-toggle-projects {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-hover);
+  padding: 13px 32px;
+  border-radius: var(--radius-pill);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn-toggle-projects:hover {
+  background: var(--primary-glow);
+  border-color: var(--primary);
+  color: var(--text-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px var(--primary-glow-strong);
+}
+
+.btn-toggle-projects i {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 12px;
+  color: var(--accent-cyan);
+}
+
+.btn-toggle-projects.active i {
+  transform: rotate(180deg);
+}
+
+.featured-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-cyan);
+  background: rgba(6, 182, 212, 0.12);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
 /* ======================== SERVICES ======================== */
 .services {
   padding: 120px 10%;
@@ -1611,6 +1697,7 @@ hr {
   }
 
   .projects-container,
+  .projects-more,
   .services-container {
     grid-template-columns: 1fr;
     gap: 18px;
