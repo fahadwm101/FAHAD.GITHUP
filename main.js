@@ -1,5 +1,7 @@
-const navLinks = document.querySelectorAll('.ul-list li a');
-const sections = document.querySelectorAll('section');
+/**
+ * FAHAD WATHIQ — PORTFOLIO JAVASCRIPT
+ * Modern, responsive interactions & i18n
+ */
 
 // Translation Dictionary
 const translations = {
@@ -10,10 +12,10 @@ const translations = {
     "nav-specializations": "Specializations",
     "nav-contact": "Contact",
     "hero-title": "Hi, I'm CHEETAH",
-    "hero-subtitle": "Software Engineer | Frontend Specialist",
+    "hero-subtitle": "Frontend Software Engineer | Architect",
     "hero-p1": "Building scalable, production-ready applications like personal productivity hubs. I transform complex user requirements into high-performance, product-centric web architectures.",
     "hero-p2": "With a rigorous Computer Science foundation from the University of Karbala and 2+ years of professional engineering experience, I specialize in bridging the gap between sophisticated backend logic and intuitive user experiences.",
-    "hero-p3": "Product engineering excellence through precision and performance.",
+    "hero-p3": "Product engineering excellence through precision, elegance, and scale.",
     "about-philosophy": "ENGINEERING PHILOSOPHY",
     "about-title1": "Architecting Scalable",
     "about-title2": "Frontend Solutions",
@@ -28,7 +30,7 @@ const translations = {
     "about-card3-p": "5+ Enterprise-Ready Projects",
     "projects-subtitle": "CASE STUDIES",
     "projects-title": "Engineering Portfolio",
-    "projects-p1": "A selection of projects where I solved complex architectural challenges ",
+    "projects-p1": "A selection of projects where I solved complex architectural challenges",
     "projects-p2": "using modern frontend engineering and robust problem-solving techniques.",
     "project-problem": "The Problem:",
     "project-solution": "The Impact/Solution:",
@@ -46,21 +48,22 @@ const translations = {
     "project3-solution-text": "Centralized intelligent commerce platform.",
     "project4-title": "Enterprise Portfolio",
     "project4-p": "High-performance professional identity platform for software engineers.",
-    "project4-problem-text": "Inability to communicate true value effectively.",
-    "project4-solution-text": "Professional strategic positioning tool.",
+    "project4-problem-text": "Inability to communicate true engineering value effectively to global clients.",
+    "project4-solution-text": "Professional strategic positioning tool with high accessibility and sleek interaction.",
     "project5-title": "Productivity Engine",
     "project5-p": "An intelligent ecosystem for academic management and AI-assisted task tracking.",
     "project5-problem-text": "Information overload in traditional note-taking apps leading to decreased user focus.",
     "project5-solution-text": "Built a modular React-based workspace with integrated AI assistants to automate task prioritization.",
     "project6-title": "R.I.S.E OS Assistant",
     "project6-p": "Voice-controlled OS automation program built for efficiency.",
-    "project6-problem-text": "Lack of accessibility for certain workflows.",
-    "project6-solution-text": "Specific voice-controlled assistant program.",
+    "project6-problem-text": "Lack of quick accessibility for complex recurring system workflows.",
+    "project6-solution-text": "Specific voice-controlled assistant program built in Python for desktop automation.",
     "project-btn-live": "Live Demo",
+    "project-btn-inquiry": "Architecture & Demo",
     "project-btn-arch": "Architecture",
     "project-btn-deploy": "Deployment",
     "project-btn-doc": "Documentation",
-    "project-btn-demo": "Demo",
+    "project-btn-demo": "Demo Info",
     "services-subtitle": "CORE SPECIALIZATIONS",
     "services-title": "Engineering Services",
     "service1-title": "Responsive UI/UX Development",
@@ -78,24 +81,25 @@ const translations = {
     "form-btn": "Send Inquiry",
     "footer-copy": "CHEETAH | Software Engineering.",
     "hero-badge": "Open for Senior Opportunities & Consulting",
-    "hero-location": "Based in IRAQ",
+    "hero-location": "Based in IRAQ, Karbala",
     "hero-availability": "Available for High-Impact Projects",
     "hero-btn-work": "Work With Me",
     "hero-btn-resume": "View Resume",
     "hero-follow": "Professional Networks:",
-    "contact-location": "Iraq , Karbala"
+    "contact-location": "Iraq, Karbala",
+    "toast-success": "Thank you! Your inquiry has been prepared."
   },
   ar: {
     "nav-home": "الرئيسية",
     "nav-about": "من أنا",
     "nav-projects": "المشاريع",
     "nav-specializations": "التخصصات",
-    "nav-contact": "اتصل بي",
+    "nav-contact": "تواصل معي",
     "hero-title": "مرحباً، أنا CHEETAH",
     "hero-subtitle": "مهندس برمجيات | متخصص واجهات أمامية",
     "hero-p1": "بناء تطبيقات قابلة للتوسع وجاهزة للإنتاج مثل مراكز الإنتاجية الشخصية. أقوم بتحويل متطلبات المستخدم المعقدة إلى بنى ويب عالية الأداء تركز على المنتج.",
     "hero-p2": "مع أساس متين في علوم الحاسوب من جامعة كربلاء وخبرة هندسية مهنية تزيد عن سنتين، أتخصص في سد الفجوة بين منطق الخلفية المتطور وتجارب المستخدم البديهية.",
-    "hero-p3": "التميز في هندسة المنتجات من خلال الدقة والأداء.",
+    "hero-p3": "التميز في هندسة المنتجات من خلال الدقة، الأناقة وقابلية التوسع.",
     "about-philosophy": "فلسفة الهندسة",
     "about-title1": "هندسة واجهات",
     "about-title2": "حلول برمجية قابلة للتوسع",
@@ -122,27 +126,28 @@ const translations = {
     "project2-p": "حل رقمي استراتيجي يسد الفجوة التشغيلية بين المرضى ومرافق الرعاية الصحية.",
     "project2-problem-text": "تعاني العيادات الصحية من عدم الكفاءة التشغيلية، والجدولة المجزأة، وضعف التواصل بين المريض ومقدم الخدمة.",
     "project2-solution-text": "يوفر جدولة المواعيد في الوقت الفعلي، والحوكمة الإدارية، والمسارات التشغيلية الاستباقية لزيادة كفاءة العيادة ورفع تجربة المريض.",
-    "project3-title": "موقع NeuroSing",
+    "project3-title": "متجر NeuroSing الإلكتروني",
     "project3-p": "متجر إلكتروني حديث مع تصفية المنتجات وسلة التسوق ونظام الدفع.",
-    "project3-problem-text": "التجزئة في سوق المستلزمات العصبية.",
-    "project3-solution-text": "منصة تجارة ذكية مركزية.",
+    "project3-problem-text": "التشتت والتجزئة في سوق المستلزمات العصبية والطبية.",
+    "project3-solution-text": "منصة تجارة ذكية مركزية تسهل عمليات الطلب والتصفية الفورية.",
     "project4-title": "معرض أعمال المؤسسات",
     "project4-p": "منصة هوية مهنية عالية الأداء لمهندسي البرمجيات.",
-    "project4-problem-text": "Inability to communicate true value effectively.",
-    "project4-solution-text": "Professional strategic positioning tool.",
-    "project5-title": "Productivity Engine",
-    "project5-p": "An intelligent ecosystem for academic management and AI-assisted task tracking.",
-    "project5-problem-text": "Information overload in traditional note-taking apps leading to decreased user focus.",
-    "project5-solution-text": "Built a modular React-based workspace with integrated AI assistants to automate task prioritization.",
-    "project6-title": "R.I.S.E OS Assistant",
-    "project6-p": "Voice-controlled OS automation program built for efficiency.",
-    "project6-problem-text": "Lack of accessibility for certain workflows.",
-    "project6-solution-text": "Specific voice-controlled assistant program.",
+    "project4-problem-text": "صعوبة إبراز القيمة الهندسية والخبرة التقنية الحقيقية للشركات العالمية.",
+    "project4-solution-text": "بناء منصة هوية مهنية استراتيجية بتصميم تفاعلي متقدم وأداء فائق وسرعة وصول عالية.",
+    "project5-title": "محرك الإنتاجية الذكي (Productivity Engine)",
+    "project5-p": "نظام بيئي ذكي للإدارة الأكاديمية وتتبع المهام مدعوم بالذكاء الاصطناعي.",
+    "project5-problem-text": "التشتت وتراكم المهام في تطبيقات الملاحظات التقليدية مما يقلل تركيز المستخدم.",
+    "project5-solution-text": "تطوير مساحة عمل معيارية مبنية بـ React مع مساعدين أذكياء لأتمتة ترتيب الأولويات.",
+    "project6-title": "مساعد نظام التشغيل R.I.S.E",
+    "project6-p": "برنامج أتمتة لنظام التشغيل يتم التحكم به صوتياً تم بناؤه لتحقيق أقصى كفاءة.",
+    "project6-problem-text": "صعوبة الوصول السريع وأتمتة مسارات العمل المتكررة على النظام.",
+    "project6-solution-text": "تطوير مساعد صوتي مخصص باستخدام بايثون للتحكم بأوامر النظام وتنفيذ المهام التلقائية.",
     "project-btn-live": "عرض حي",
+    "project-btn-inquiry": "المعمارية والتجربة",
     "project-btn-arch": "المعمارية",
     "project-btn-deploy": "النشر",
     "project-btn-doc": "التوثيق",
-    "project-btn-demo": "تجربة",
+    "project-btn-demo": "تفاصيل التجربة",
     "services-subtitle": "التخصصات الجوهرية",
     "services-title": "الخدمات الهندسية",
     "service1-title": "تطوير واجهات UI/UX استجابية",
@@ -160,27 +165,34 @@ const translations = {
     "form-btn": "إرسال الاستفسار",
     "footer-copy": "CHEETAH | هندسة البرمجيات.",
     "hero-badge": "متاح للفرص الكبيرة والاستشارات",
-    "hero-location": "مقر العمل: العراق",
+    "hero-location": "مقر العمل: العراق، كربلاء",
     "hero-availability": "متاح للمشاريع عالية التأثير",
     "hero-btn-work": "وظفني الآن",
     "hero-btn-resume": "عرض السيرة الذاتية",
     "hero-follow": "الشبكات المهنية:",
-    "contact-location": "العراق، كربلاء"
+    "contact-location": "العراق، كربلاء",
+    "toast-success": "شكراً لك! تم تجهيز استفسارك بنجاح."
   }
 };
 
+// Word lists for Typewriter
+const englishWords = ["Frontend Engineer", "Software Architect", "Technical Consultant", "React & TypeScript Specialist"];
+const arabicWords = ["مهندس واجهات أمامية", "معماري برمجيات", "مستشار تقني", "خبير React & TypeScript"];
+let currentWords = englishWords;
+
+// Update Language Function
 function updateLanguage(lang) {
   const elements = document.querySelectorAll('[data-i18n]');
   elements.forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (translations[lang][key]) {
+    if (translations[lang] && translations[lang][key]) {
       const icon = el.querySelector('i');
       if (icon) {
         const textNode = Array.from(el.childNodes).find(node => node.nodeType === Node.TEXT_NODE);
         if (textNode) {
-          textNode.textContent = translations[lang][key];
+          textNode.textContent = ' ' + translations[lang][key];
         } else {
-           el.innerHTML = icon.outerHTML + ' ' + translations[lang][key];
+          el.innerHTML = icon.outerHTML + ' ' + translations[lang][key];
         }
       } else {
         el.innerText = translations[lang][key];
@@ -191,61 +203,135 @@ function updateLanguage(lang) {
   const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
   placeholders.forEach(el => {
     const key = el.getAttribute('data-i18n-placeholder');
-    if (translations[lang][key]) {
+    if (translations[lang] && translations[lang][key]) {
       el.placeholder = translations[lang][key];
     }
   });
 
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-  
+
   const langBtn = document.getElementById('lang-toggle-btn');
   if (langBtn) {
     langBtn.innerText = lang === 'ar' ? 'EN' : 'AR';
   }
 
-  if (lang === 'ar') {
-    currentWords = ["مهندس واجهات أمامية", "معماري برمجيات", "مستشار تقني", "خبير React"];
-  } else {
-    currentWords = ["Frontend Engineer", "Software Architect", "Technical Consultant", "React Expert"];
-  }
-  
+  // Update typewriter words
+  currentWords = lang === 'ar' ? arabicWords : englishWords;
+  wordIndex = 0;
+  charIndex = 0;
+  isDeleting = false;
+
   localStorage.setItem('preferredLanguage', lang);
 }
-
-const words = ["Frontend Engineer", "Software Architect", "Technical Consultant", "React Expert"];
-let currentWords = words;
 
 function toggleLanguage() {
   const currentLang = localStorage.getItem('preferredLanguage') || 'en';
   const newLang = currentLang === 'en' ? 'ar' : 'en';
   updateLanguage(newLang);
-  wordIndex = 0;
-  charIndex = 0;
-  isDeleting = false;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
-  updateLanguage(savedLang);
+// ======================== TYPEWRITER EFFECT ========================
+const typingElement = document.querySelector('.info-home h3');
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingTimeout = null;
+
+function type() {
+  if (!typingElement) return;
+
+  const currentWord = currentWords[wordIndex % currentWords.length];
+  const displayedText = currentWord.substring(0, charIndex);
+
+  typingElement.innerHTML = displayedText + '<span class="cursor">|</span>';
+
+  let speed = 90;
+  if (isDeleting) {
+    speed = 45;
+  }
+
+  if (!isDeleting && charIndex < currentWord.length) {
+    charIndex++;
+    typingTimeout = setTimeout(type, speed);
+  } else if (isDeleting && charIndex > 0) {
+    charIndex--;
+    typingTimeout = setTimeout(type, speed);
+  } else {
+    isDeleting = !isDeleting;
+    if (!isDeleting) {
+      wordIndex = (wordIndex + 1) % currentWords.length;
+      typingTimeout = setTimeout(type, 500);
+    } else {
+      typingTimeout = setTimeout(type, 1500); // Wait before starting to erase
+    }
+  }
+}
+
+// ======================== HAMBURGER MENU & OVERLAY ========================
+const hamburger = document.getElementById('hamburger-menu');
+const navMenu = document.querySelector('.ul-list');
+const menuOverlay = document.getElementById('menu-overlay');
+
+function closeMobileMenu() {
+  if (navMenu) navMenu.classList.remove('active');
+  if (menuOverlay) menuOverlay.classList.remove('active');
+  document.body.classList.remove('menu-open');
+  if (hamburger) {
+    const icon = hamburger.querySelector('i');
+    if (icon) icon.classList.replace('fa-xmark', 'fa-bars');
+  }
+}
+
+function openMobileMenu() {
+  if (navMenu) navMenu.classList.add('active');
+  if (menuOverlay) menuOverlay.classList.add('active');
+  document.body.classList.add('menu-open');
+  if (hamburger) {
+    const icon = hamburger.querySelector('i');
+    if (icon) icon.classList.replace('fa-bars', 'fa-xmark');
+  }
+}
+
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = navMenu.classList.contains('active');
+    if (isOpen) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  });
+}
+
+if (menuOverlay) {
+  menuOverlay.addEventListener('click', closeMobileMenu);
+}
+
+// Close menu when clicking on navigation links
+document.querySelectorAll('.ul-list a').forEach(link => {
+  link.addEventListener('click', closeMobileMenu);
 });
 
-const allLinks = document.querySelectorAll('a[href^="#"]');
+// ======================== SMOOTH SCROLL & ACTIVE LINK ========================
+const navLinks = document.querySelectorAll('.ul-list li a');
+const sections = document.querySelectorAll('section');
 
 function removeActive() {
   navLinks.forEach(link => link.parentElement.classList.remove('active'));
 }
 
-allLinks.forEach(link => {
+document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
     const targetId = link.getAttribute('href');
-    if (targetId === "#") return;
-    
+    if (targetId === '#' || targetId === '') return;
+
     const targetSection = document.querySelector(targetId);
     if (targetSection) {
       e.preventDefault();
+      const topOffset = targetSection.getBoundingClientRect().top + window.pageYOffset - 80;
       window.scrollTo({
-        top: targetSection.offsetTop - 80, 
+        top: topOffset,
         behavior: 'smooth'
       });
 
@@ -257,158 +343,141 @@ allLinks.forEach(link => {
   });
 });
 
-window.addEventListener('scroll', () => {
-  let scrollPos = window.scrollY + 100;
-
-  sections.forEach(section => {
-    if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-      removeActive();
-      const activeLink = document.querySelector(`.ul-list li a[href="#${section.id}"]`);
-      if (activeLink) activeLink.parentElement.classList.add('active');
-    }
-  });
-
-  if(window.scrollY > 500){
-    backToTop.style.display = "flex";
-  } else {
-    backToTop.style.display = "none";
-  }
-
-  revealElements.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-    const revealPoint = 150;
-
-    if(elementTop < windowHeight - revealPoint){
-      el.classList.add('active-reveal');
-    }
-  });
-});
-
-const revealElements = document.querySelectorAll('.home-container, .about-container, .projects-container, .services-container, .contact-content');
-revealElements.forEach(el => el.classList.add('reveal'));
-
+// ======================== BACK TO TOP ========================
 const backToTop = document.createElement('div');
+backToTop.id = 'back-to-top';
+backToTop.setAttribute('aria-label', 'Back to top');
 backToTop.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
-backToTop.id = "back-to-top";
 document.body.appendChild(backToTop);
-
-backToTop.style.cssText = `
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  background: #474af0;
-  color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 1000;
-  transition: transform 0.3s ease;
-`;
 
 backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-backToTop.addEventListener('mouseover', () => backToTop.style.transform = 'scale(1.2)');
-backToTop.addEventListener('mouseout', () => backToTop.style.transform = 'scale(1)');
+// ======================== SCROLL OBSERVER (Active Nav, BackToTop, Reveal) ========================
+const revealElements = document.querySelectorAll('.about-container, .projects-container, .services-container, .contact-content');
+revealElements.forEach(el => el.classList.add('reveal'));
 
-const cards = document.querySelectorAll('.project-card, .c1, .service-card');
-cards.forEach(card => {
-  card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-8px) scale(1.05)');
-  card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0) scale(1)');
+let scrollTicking = false;
+window.addEventListener('scroll', () => {
+  if (!scrollTicking) {
+    window.requestAnimationFrame(() => {
+      const scrollPos = window.scrollY + 140;
+
+      // Active nav link
+      sections.forEach(section => {
+        if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+          removeActive();
+          const activeLink = document.querySelector(`.ul-list li a[href="#${section.id}"]`);
+          if (activeLink) activeLink.parentElement.classList.add('active');
+        }
+      });
+
+      // Back to top visibility
+      if (window.scrollY > 350) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+
+      // Scroll Reveal
+      revealElements.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+          el.classList.add('active-reveal');
+        }
+      });
+
+      scrollTicking = false;
+    });
+    scrollTicking = true;
+  }
 });
 
-const typingElement = document.querySelector('.info-home h3'); 
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let typingSpeed = 100;
+// ======================== TOAST NOTIFICATION ========================
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  const toastMsg = document.getElementById('toast-msg');
+  if (!toast) return;
 
-function type() {
-    const currentWord = currentWords[wordIndex];
-    let displayedText = currentWord.substring(0, charIndex);
-    
-    typingElement.innerHTML = displayedText + '<span class="cursor">|</span>';
+  if (toastMsg) toastMsg.textContent = message;
+  toast.classList.add('show');
 
-    if (!isDeleting && charIndex < currentWord.length) {
-        charIndex++;
-        setTimeout(type, typingSpeed);
-    } else if (isDeleting && charIndex > 0) {
-        charIndex--;
-        setTimeout(type, typingSpeed / 2);
-    } else {
-        isDeleting = !isDeleting;
-        if (!isDeleting) {
-            wordIndex = (wordIndex + 1) % currentWords.length;
-        }
-        setTimeout(type, 1000);
-    }
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 4000);
 }
 
-document.addEventListener('DOMContentLoaded', type);
+// ======================== CONTACT FORM SUBMISSION ========================
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
 
-document.addEventListener("DOMContentLoaded", () => {
-  const loadingText = document.getElementById("loading-text");
-  const mainIcon = document.querySelector(".main-icon");
-  const subIcons = document.querySelectorAll(".sub-icons i");
-  const designerText = document.getElementById("designer-text");
-  const mainPage = document.getElementById("main-page");
-  const loadingScreen = document.getElementById("loading-screen");
+    const name = contactForm.querySelector('[name="user_name"]').value.trim();
+    const email = contactForm.querySelector('[name="user_email"]').value.trim();
+    const message = contactForm.querySelector('[name="message"]').value.trim();
 
-  function showElement(element, delay=0){
+    if (!name || !email || !message) return;
+
+    const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+    const successMsg = translations[currentLang]["toast-success"] || "Thank you! Your message has been prepared.";
+
+    showToast(successMsg);
+
+    // Prepare mailto link as fallback so message is never lost
+    const mailtoSubject = encodeURIComponent(`Inquiry from ${name} via Portfolio`);
+    const mailtoBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    const mailtoUrl = `mailto:fhadwatek@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+    // Open mailto link cleanly
+    window.location.href = mailtoUrl;
+
+    contactForm.reset();
+  });
+}
+
+// ======================== INITIALIZATION & LOADER ========================
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Language init
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  updateLanguage(savedLang);
+
+  // 2. Start Typewriter
+  type();
+
+  // 3. Loading Screen
+  const loadingScreen = document.getElementById('loading-screen');
+  const loadingText = document.getElementById('loading-text');
+  const mainIcon = document.querySelector('.main-icon');
+  const subIcons = document.querySelectorAll('.sub-icons i');
+  const designerText = document.getElementById('designer-text');
+
+  function showLoadingElement(element, delay = 0) {
     setTimeout(() => {
       if (element) {
-        element.classList.remove("hidden");
-        element.classList.add("fall");
+        element.classList.remove('hidden');
+        element.classList.add('fall');
       }
     }, delay);
   }
 
-  showElement(loadingText, 0);          
-  showElement(mainIcon, 100);         
+  showLoadingElement(mainIcon, 50);
+  showLoadingElement(loadingText, 150);
   subIcons.forEach((icon, idx) => {
-    showElement(icon, 200 + idx*50);  
+    showLoadingElement(icon, 250 + idx * 70);
   });
-  showElement(designerText, 400);    
+  showLoadingElement(designerText, 450);
 
+  // Smooth dismiss loader
   setTimeout(() => {
-    loadingScreen.style.opacity = '0';
-    setTimeout(() => {
-      loadingScreen.style.display='none';
-      window.dispatchEvent(new Event('scroll'));
-    }, 100);
-    if (mainPage) mainPage.classList.add("visible");
-  }, 500);
-});
-
-// Hamburger Menu Logic
-const hamburger = document.getElementById('hamburger-menu');
-const navMenu = document.querySelector('.ul-list');
-
-if (hamburger) {
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    const icon = hamburger.querySelector('i');
-    if (navMenu.classList.contains('active')) {
-      icon.classList.replace('fa-bars', 'fa-xmark');
-    } else {
-      icon.classList.replace('fa-xmark', 'fa-bars');
+    if (loadingScreen) {
+      loadingScreen.classList.add('fade-out');
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+        window.dispatchEvent(new Event('scroll'));
+      }, 500);
     }
-  });
-}
-
-// Close menu on link click
-document.querySelectorAll('.ul-list a').forEach(link => {
-  link.addEventListener('click', () => {
-    navMenu.classList.remove('active');
-    if (hamburger) {
-      const icon = hamburger.querySelector('i');
-      icon.classList.replace('fa-xmark', 'fa-bars');
-    }
-  });
+  }, 1100);
 });
