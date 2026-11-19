@@ -295,10 +295,24 @@ function updateLanguage(lang) {
           el.innerHTML = icon.outerHTML + ' ' + translations[lang][key];
         }
       } else {
-        el.innerText = translations[lang][key];
+        el.textContent = translations[lang][key];
       }
     }
   });
+
+  // Guaranteed Explicit Name & Title Translation
+  const strokeName = document.querySelector('.hero-name-stroke');
+  const solidName = document.querySelector('.hero-name-solid');
+  if (strokeName) {
+    strokeName.textContent = lang === 'ar' ? 'فهد' : 'FAHAD';
+  }
+  if (solidName) {
+    solidName.textContent = lang === 'ar' ? 'واثق' : 'WATHIQ';
+  }
+
+  document.title = lang === 'ar'
+    ? 'فهد واثق (CHEETAH) | مهندس برمجيات'
+    : 'Fahad Wathiq (CHEETAH) | Frontend Software Engineer';
 
   const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
   placeholders.forEach(el => {

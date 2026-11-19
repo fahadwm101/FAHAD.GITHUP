@@ -1970,19 +1970,20 @@ hr {
 }
 
 [dir="rtl"] .hero-name-stroke {
-  color: #FFFFFF;
-  -webkit-text-stroke: 0;
-  text-stroke: 0;
-  letter-spacing: normal;
+  color: #FFFFFF !important;
+  -webkit-text-stroke: 0 !important;
+  text-stroke: 0 !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  letter-spacing: normal !important;
   font-family: 'IBM Plex Sans Arabic', 'Cairo', sans-serif !important;
 }
 
 [dir="rtl"] .hero-name-solid {
-  background: linear-gradient(135deg, #FFFFFF 25%, #FF473A 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: normal;
+  background: linear-gradient(135deg, #FFFFFF 25%, #FF473A 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  letter-spacing: normal !important;
   font-family: 'IBM Plex Sans Arabic', 'Cairo', sans-serif !important;
 }
 
