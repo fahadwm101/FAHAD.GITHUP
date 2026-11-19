@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>فهد واثق مرتضى - السيرة الذاتية المهنية</title>
+<style>
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-weight: 400;
+  src: url('cv_assets/fonts/IBMPlexArabic_400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-weight: 500;
+  src: url('cv_assets/fonts/IBMPlexArabic_500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-weight: 600;
+  src: url('cv_assets/fonts/IBMPlexArabic_600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-weight: 700;
+  src: url('cv_assets/fonts/IBMPlexArabic_700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 600;
+  src: url('cv_assets/fonts/PlusJakartaSans_600.woff2') format('woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  font-family: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+  color: #0f172a;
+  background-color: #ffffff;
+  font-size: 8.6pt;
+  line-height: 1.36;
+}
+
+.resume-page {
+  width: 210mm;
+  height: 297mm;
+  max-height: 297mm;
+  padding: 10mm 13mm 8mm 13mm;
+  margin: 0 auto;
+  background: #ffffff;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Header */
+.header {
+  border-bottom: 1.5px solid #0f172a;
+  padding-bottom: 7px;
+  margin-bottom: 8px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 3px;
+}
+
+.name {
+  font-size: 19pt;
+  font-weight: 700;
+  color: #090d16;
+  letter-spacing: -0.2px;
+}
+
+.title-badge {
+  font-size: 10pt;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 8.3pt;
+  color: #475569;
+  font-weight: 500;
+  align-items: center;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #334155;
+  text-decoration: none;
+}
+
+.contact-item a {
+  color: #334155;
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans', 'IBM Plex Sans Arabic', sans-serif;
+  direction: ltr;
+  display: inline-block;
+}
+
+.contact-item a:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+.dot {
+  color: #cbd5e1;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 7px;
+}
+
+.section-title {
+  font-size: 9.3pt;
+  font-weight: 700;
+  color: #090d16;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 2px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-title span.accent-bar {
+  display: inline-block;
+  width: 14px;
+  height: 2.5px;
+  background: #4f46e5;
+  margin-left: 6px;
+  border-radius: 2px;
+}
+
+.summary-text {
+  color: #334155;
+  font-size: 8.4pt;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+/* Skills */
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5px;
+  font-size: 8.3pt;
+}
+
+.skill-row {
+  display: flex;
+  align-items: baseline;
+}
+
+.skill-category {
+  width: 130px;
+  flex-shrink: 0;
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 8.4pt;
+}
+
+.skill-items {
+  color: #334155;
+  flex-grow: 1;
+  font-family: 'Plus Jakarta Sans', 'IBM Plex Sans Arabic', sans-serif;
+  direction: ltr;
+  text-align: right;
+}
+
+/* Items */
+.item {
+  margin-bottom: 5px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.5px;
+}
+
+.item-left {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.item-title {
+  font-size: 9.1pt;
+  font-weight: 700;
+  color: #0f172a;
+  font-family: 'Plus Jakarta Sans', 'IBM Plex Sans Arabic', sans-serif;
+}
+
+.item-role {
+  font-size: 8.4pt;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+.item-tech {
+  font-size: 7.7pt;
+  font-weight: 500;
+  color: #64748b;
+  background: #f8fafc;
+  padding: 0.5px 5px;
+  border-radius: 3px;
+  border: 1px solid #e2e8f0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  direction: ltr;
+  display: inline-block;
+}
+
+.item-date {
+  font-size: 8pt;
+  font-weight: 600;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.item-bullets {
+  list-style: none;
+  padding-right: 0;
+}
+
+.item-bullets li {
+  position: relative;
+  padding-right: 12px;
+  margin-bottom: 2px;
+  color: #334155;
+  font-size: 8.3pt;
+  line-height: 1.35;
+  text-align: justify;
+}
+
+.item-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.item-bullets li::before {
+  content: "◂";
+  position: absolute;
+  right: 0;
+  top: -0.5px;
+  color: #4f46e5;
+  font-size: 8.5pt;
+}
+
+.highlight {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Education Layout */
+.edu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.edu-school {
+  font-size: 9.1pt;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.edu-degree {
+  font-size: 8.4pt;
+  color: #475569;
+  margin-top: 1px;
+}
+
+.edu-courses {
+  font-size: 8pt;
+  color: #64748b;
+  margin-top: 1px;
+}
+
+.edu-courses strong {
+  color: #334155;
+}
+</style>
+</head>
+<body>
+<div class="resume-page">
+  <!-- Header -->
+  <header class="header">
+    <div class="header-top">
+      <h1 class="name">فهد واثق مرتضى</h1>
+      <div class="title-badge">مهندس برمجيات وواجهات أمامية</div>
+    </div>
+    <div class="contact-row">
+      <span class="contact-item">📍 العراق، كربلاء / السماوة</span>
+      <span class="dot">•</span>
+      <span class="contact-item">✉️ <a href="mailto:fhadwatek@gmail.com">fhadwatek@gmail.com</a></span>
+      <span class="dot">•</span>
+      <span class="contact-item" style="direction: ltr;">📱 +964 782 479 1185</span>
+      <span class="dot">•</span>
+      <span class="contact-item">🌐 <a href="https://fahadwm101.github.io/FAHAD.GITHUP/">الموقع الشخصي</a></span>
+      <span class="dot">•</span>
+      <span class="contact-item">💻 <a href="https://github.com/fahadwm101">GitHub</a></span>
+      <span class="dot">•</span>
+      <span class="contact-item">🔗 <a href="https://linkedin.com">LinkedIn</a></span>
+    </div>
+  </header>
+
+  <!-- Summary -->
+  <section class="section">
+    <div class="section-title">
+      <div><span class="accent-bar"></span>الملخص المهني</div>
+    </div>
+    <p class="summary-text">
+      <span class="highlight">مهندس برمجيات وواجهات أمامية</span> يمتلك أساساً أكاديمياً متيناً في علوم الحاسوب من جامعة كربلاء مع خبرة برمجية عملية تفوق العامين في بناء منصات وتطبيقات ويب وموبايل إنتاجية عالية الأداء. يتميز بقدرة مثبتة على تحويل متطلبات الأعمال المعقدة إلى حلول تقنية قابلة للتوسع في قطاعات الرعاية الصحية والتعليم والضيافة، عبر توظيف أحدث أطر العمل الحديثة (<span class="highlight">React.js, Next.js, TypeScript, Tailwind CSS</span>) والأنظمة الخلفية المتينة (<span class="highlight">Python/FastAPI, Flutter, RESTful APIs</span>) مع التركيز الكامل على تجربة المستخدم وسرعة الاستجابة.
+    </p>
+  </section>
+
+  <!-- Technical Skills -->
+  <section class="section">
+    <div class="section-title">
+      <div><span class="accent-bar"></span>المهارات التقنية</div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <div class="skill-category">لغات البرمجة</div>
+        <div class="skill-items">JavaScript (ES6+), TypeScript, Python, Dart, C++, C#, PHP, SQL</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-category">الواجهات الأمامية و UI/UX</div>
+        <div class="skill-items">React.js, Next.js, Flutter, Vue.js, Tailwind CSS, HTML5/CSS3, Responsive UI/UX</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-category">الأنظمة الخلفية والسحابية</div>
+        <div class="skill-items">FastAPI, Laravel, Express.js, Firebase, Supabase, SQLite, PostgreSQL, REST APIs</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-category">الأدوات والمنهجيات</div>
+        <div class="skill-items">Git, GitHub, Vercel, Google Play Console, Agile/Scrum, Vite, Performance Tuning</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership Experience -->
+  <section class="section">
+    <div class="section-title">
+      <div><span class="accent-bar"></span>الخبرات القيادية والمهنية</div>
+    </div>
+    <div class="item">
+      <div class="item-header">
+        <div class="item-left">
+          <span class="item-title">فريق برمجيات R.I.S.E</span>
+          <span class="item-role">— المؤسس والقائد التقني</span>
+        </div>
+        <span class="item-date">2025 – حتى الآن | كربلاء، العراق</span>
+      </div>
+      <ul class="item-bullets">
+        <li>تأسيس وقيادة فريق هندسي متعدد التخصصات لبناء وتطوير حلول برمجية واقعية للقطاعين الأكاديمي والمؤسسي.</li>
+        <li>هندسة البنية الأساسية للواجهات ومكتبات المكونات لأكثر من 5 منصات وتطبيقات بالاعتماد على React و TypeScript و Tailwind.</li>
+        <li>إرساء معايير التطوير الجماعي: دورات مراجعة الأكواد (Code Reviews)، منهجية Agile، وأتمتة النشر عبر Vercel CI/CD.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="section">
+    <div class="section-title">
+      <div><span class="accent-bar"></span>المشاريع الهندسية البارزة</div>
+    </div>
+
+    <!-- Project 1: Cura -->
+    <div class="item">
+      <div class="item-header">
+        <div class="item-left">
+          <span class="item-title">Cura</span>
+          <span class="item-role">— منصة الرعاية الصحية والجدولة الطبية</span>
+          <span class="item-tech">React.js • Tailwind CSS • REST APIs</span>
+        </div>
+        <span class="item-date">جاهز للإنتاج</span>
+      </div>
+      <ul class="item-bullets">
+        <li>تصميم وبناء منصة صحية شاملة تربط المرضى بالعيادات التخصصية وتسد الفجوات التشغيلية في حجز المواعيد.</li>
+        <li>تطوير لوحات تحكم إدارية فورية للأطباء ونظام جدولة ذكي ساهم في القضاء على تشتت الحجوزات وتسريع تدفق البيانات.</li>
+        <li>تصميم واجهة مستخدم بديهية تركّز على سهولة الوصول وسرعة استرجاع السجلات في أقل من ثانية.</li>
+      </ul>
+    </div>
+
+    <!-- Project 2: APEX Core -->
+    <div class="item">
+      <div class="item-header">
+        <div class="item-left">
+          <span class="item-title">APEX Core</span>
+          <span class="item-role">— تطبيق اللياقة البدنية والتمارين للرياضيين</span>
+          <span class="item-tech">Flutter • Dart • Firebase • Google Play</span>
+        </div>
+        <span class="item-date">متجر Google Play</span>
+      </div>
+      <ul class="item-bullets">
+        <li>تطوير تطبيق متكامل متعدّد المنصات بـ Flutter لتتبع اللياقة البدنية والتمارين مع خوارزميات تحليل الأداء الرياضي.</li>
+        <li>إدارة دورة حياة التطبيق بالكامل واجتياز مرحلة الاختبار المغلق ومعايير التحقق الصارمة في Google Play بنجاح حتى الإطلاق.</li>
+      </ul>
+    </div>
+
+    <!-- Project 3: R.NOTE -->
+    <div class="item">
+      <div class="item-header">
+        <div class="item-left">
+          <span class="item-title">R.NOTE</span>
+          <span class="item-role">— مركز إنتاجية الطلاب وإدارة المهام الدراسية</span>
+          <span class="item-tech">React.js • Tailwind CSS • Gamification</span>
+        </div>
+        <span class="item-date">تطبيق ويب</span>
+      </div>
+      <ul class="item-bullets">
+        <li>هندسة مساحة عمل أكاديمية متكاملة تجمع الجداول الدراسية والمهام وملاحظات Markdown ومواعيد الامتحانات في واجهة موحدة.</li>
+        <li>تطبيق نظام تحفيزي ذكي (XP Gamification) لرفع معدل إنجاز الطلاب للمهام، مع بنية سلسة تدعم التبديل التلقائي بين الوضعين الفاتح والداكن.</li>
+      </ul>
+    </div>
+
+    <!-- Project 4: Rehla -->
+    <div class="item">
+      <div class="item-header">
+        <div class="item-left">
+          <span class="item-title">Rehla (رحلة)</span>
+          <span class="item-role">— منصة الحجوزات الفندقية والضيافة</span>
+          <span class="item-tech">Laravel • Vue.js • Flutter • MySQL</span>
+        </div>
+        <span class="item-date">ويب وموبايل</span>
+      </div>
+      <ul class="item-bullets">
+        <li>تطوير منصة وتطبيق لحجوزات الفنادق في كربلاء لإدارة الغرف والغرف المتاحة وتسهيل الحجز المباشر للنزلاء.</li>
+      </ul>
+    </div>
+
+    <!-- Project 5: ForensicStyle -->
+    <div class="item">
+      <div class="item-header">
+        <div class="item-left">
+          <span class="item-title">ForensicStyle</span>
+          <span class="item-role">— أداة التحليل الجنائي الرقمي بالذكاء الاصطناعي</span>
+          <span class="item-tech">Python • FastAPI • Scikit-learn</span>
+        </div>
+        <span class="item-date">ذكاء اصطناعي وخلفية</span>
+      </div>
+      <ul class="item-bullets">
+        <li>بناء نظام جنائي رقمي يوظف نماذج تعلم الآلة لتحليل الأسلوب الكتابي (Stylometry) وتحديد هوية المؤلف واكتشاف الأنماط الشاذة في النصوص.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section" style="margin-bottom: 0;">
+    <div class="section-title">
+      <div><span class="accent-bar"></span>التعليم الأكاديمي</div>
+    </div>
+    <div class="edu-row">
+      <div>
+        <div class="edu-school">جامعة كربلاء</div>
+        <div class="edu-degree"><strong>بكالوريوس في علوم الحاسوب (B.S. in Computer Science)</strong></div>
+        <div class="edu-courses"><strong>المساقات الأساسية:</strong> هياكل البيانات والخوارزميات، هندسة البرمجيات، البرمجة كائنية التوجه (OOP)، قواعد البيانات</div>
+      </div>
+      <div style="text-align: left;">
+        <span class="item-date">كربلاء، العراق</span>
+        <div class="item-date" style="color: #4f46e5; font-weight: 700;">سنة التخرج المتوقعة: 2027</div>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

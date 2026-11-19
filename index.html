@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
@@ -65,54 +65,76 @@
 
     <!-- Home Hero Section -->
     <section class="home" id="home">
-        <div class="home-p">
-            <span class="home-s"></span>
-            <span data-i18n="hero-badge">Open for Senior Opportunities & Consulting</span>
-        </div>
+        <!-- Background Paint Splatter (Signature ATHIRA Artwork) -->
+        <div class="hero-splatter-bg" aria-hidden="true"></div>
 
-        <!-- Live Clock & Availability Status (Feature 4) -->
+        <!-- Live Clock & Availability Status (Unified Sleek Badge) -->
         <div class="live-clock-badge">
             <span class="live-dot"></span>
+            <span class="live-status" data-i18n="hero-availability">Available for High-Impact Projects</span>
+            <span class="live-sep">•</span>
             <span class="live-city" data-i18n="live-location">Karbala, Iraq</span>
             <span class="live-sep">•</span>
             <span class="live-time" id="live-time">--:-- -- (UTC+3)</span>
-            <span class="live-sep">•</span>
-            <span class="live-status" data-i18n="live-status">Open for Work & Consulting</span>
         </div>
 
         <div class="home-container">
             <div class="home-section">
                 <div class="info-home">
-                    <h1 data-i18n="hero-title">Hi, I'm CHEETAH</h1>
-                    <h3 data-i18n="hero-subtitle">Frontend Software Engineer | Architect</h3>
-                    <div class="info-p">
-                        <p data-i18n="hero-p1">Building scalable, production-ready applications like personal productivity hubs. I transform complex user requirements into high-performance, product-centric web architectures.</p>
-                        <p data-i18n="hero-p2">With a rigorous Computer Science foundation from the University of Karbala and 2+ years of professional engineering experience, I specialize in bridging the gap between sophisticated backend logic and intuitive user experiences.</p>
-                        <p data-i18n="hero-p3">Product engineering excellence through precision, elegance, and scale.</p>
+                    <!-- ATHIRA Clean High-End Typography -->
+                    <div class="hero-name-wrap">
+                        <h1 class="hero-name-title"><span class="hero-name-stroke">FAHAD</span> <span class="hero-name-solid">WATHIQ</span></h1>
                     </div>
+                    <h2 class="hero-role-bold" data-i18n="hero-role-bold">Engineer + Frontend Architect</h2>
+                    <h3 class="hero-role-typing" data-i18n="hero-subtitle">Frontend Software Engineer | Architect</h3>
+                    
+                    <div class="info-p">
+                        <p data-i18n="hero-p1">Building scalable, production-ready applications with modern component architectures. I transform complex user requirements into high-performance, product-centric web architectures.</p>
+                        <p data-i18n="hero-p2">With a rigorous Computer Science foundation from the University of Karbala and 2+ years of professional engineering experience, I specialize in bridging the gap between sophisticated backend logic and intuitive user experiences.</p>
+                    </div>
+
                     <div class="info-p2">
                         <p><i class="fa-solid fa-location-dot"></i> <span data-i18n="hero-location">Based in IRAQ, Karbala</span></p>
-                        <p><i class="fa-solid fa-briefcase"></i> <span data-i18n="hero-availability">Available for High-Impact Projects</span></p>
+                        <p><i class="fa-solid fa-graduation-cap"></i> <span>Univ. of Karbala (CS '27)</span></p>
                     </div>
+
                     <div class="btnn">
                         <a href="#contact" class="btn-home1" data-i18n="hero-btn-work"><i class="fa-solid fa-arrow-right"></i> Work With Me</a>
-                        <a href="Fahad_Wathiq_Frontend_Engineer_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn-home2" data-i18n="hero-btn-resume"><i class="fa-solid fa-download"></i> View Resume</a>
+                        <a href="Fahad_Wathiq_Frontend_Engineer_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn-home2" id="hero-resume-btn" data-i18n="hero-btn-resume"><i class="fa-solid fa-download"></i> View Resume</a>
                     </div>
                     <div class="hhr">
                         <hr>
                     </div>
                     <div class="follow">
                         <p class="followw" data-i18n="hero-follow">Professional Networks:</p>
-                        <ul>
+                        <ul class="athira-social-circles">
                             <li><a href="https://github.com/fahadwm101" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
-                            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
                             <li><a href="https://t.me/bfa7_7" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a></li>
                             <li><a href="https://wa.me/9647824791185" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <img src="images/my.png" alt="Fahad Wathiq - CHEETAH" width="360" height="460">
+            <div class="hero-image-wrap">
+                <div class="hero-avatar-glow" aria-hidden="true"></div>
+                <img src="images/my.png" alt="Fahad Wathiq - CHEETAH" class="hero-avatar" width="370" height="470">
+                <div class="hero-floating-card">
+                    <span class="card-dot"></span>
+                    <div class="card-info">
+                        <span class="card-title">Founder & Lead Engineer</span>
+                        <span class="card-sub">R.I.S.E Software Team</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ATHIRA Scroll Down Indicator -->
+        <div class="scroll-down-indicator">
+            <a href="#about" aria-label="Scroll down">
+                <span class="scroll-icon-circle"><i class="fa-solid fa-arrow-down"></i></span>
+                <span class="scroll-label" data-i18n="hero-scroll">Scroll</span>
+            </a>
         </div>
     </section>
 
@@ -158,6 +180,7 @@
                             <span class="terminal-quick-label">Execute:</span>
                             <button type="button" class="term-btn" onclick="runTerminalCmd('stack')" data-i18n="term-btn-stack">--stack</button>
                             <button type="button" class="term-btn" onclick="runTerminalCmd('bio')" data-i18n="term-btn-bio">--bio</button>
+                            <button type="button" class="term-btn" onclick="runTerminalCmd('cv')" data-i18n="term-btn-cv">--cv</button>
                             <button type="button" class="term-btn" onclick="runTerminalCmd('contact')" data-i18n="term-btn-contact">--contact</button>
                             <button type="button" class="term-btn" onclick="runTerminalCmd('clear')" data-i18n="term-btn-clear">--clear</button>
                         </div>

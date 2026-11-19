@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Fahad Wathiq - Software & Frontend Engineer Resume</title>
+<style>
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 400;
+  src: url('cv_assets/fonts/PlusJakartaSans_400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 500;
+  src: url('cv_assets/fonts/PlusJakartaSans_500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 600;
+  src: url('cv_assets/fonts/PlusJakartaSans_600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 700;
+  src: url('cv_assets/fonts/PlusJakartaSans_700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 800;
+  src: url('cv_assets/fonts/PlusJakartaSans_800.woff2') format('woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #0f172a;
+  background-color: #ffffff;
+  font-size: 8.7pt;
+  line-height: 1.35;
+}
+
+.resume-page {
+  width: 210mm;
+  height: 297mm;
+  max-height: 297mm;
+  padding: 10mm 13mm 8mm 13mm;
+  margin: 0 auto;
+  background: #ffffff;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Header */
+.header {
+  border-bottom: 1.5px solid #0f172a;
+  padding-bottom: 7px;
+  margin-bottom: 8px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+
+.name {
+  font-size: 19pt;
+  font-weight: 800;
+  color: #090d16;
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+}
+
+.title-badge {
+  font-size: 10pt;
+  font-weight: 700;
+  color: #4f46e5;
+  letter-spacing: 0.2px;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 8.2pt;
+  color: #475569;
+  font-weight: 500;
+  align-items: center;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  text-decoration: none;
+  color: #334155;
+}
+
+.contact-item a {
+  color: #334155;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+.dot {
+  color: #cbd5e1;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 7px;
+}
+
+.section-title {
+  font-size: 9.3pt;
+  font-weight: 800;
+  color: #090d16;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 2px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-title span.accent-bar {
+  display: inline-block;
+  width: 14px;
+  height: 2.5px;
+  background: #4f46e5;
+  margin-right: 6px;
+  border-radius: 2px;
+}
+
+.summary-text {
+  color: #334155;
+  font-size: 8.5pt;
+  line-height: 1.38;
+  text-align: justify;
+}
+
+/* Skills */
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5px;
+  font-size: 8.4pt;
+}
+
+.skill-row {
+  display: flex;
+  align-items: baseline;
+}
+
+.skill-category {
+  width: 125px;
+  flex-shrink: 0;
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 8.4pt;
+}
+
+.skill-items {
+  color: #334155;
+  flex-grow: 1;
+}
+
+.skill-badge {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #334155;
+  font-weight: 600;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin: 0 1.5px;
+  font-size: 7.9pt;
+  border: 1px solid #e2e8f0;
+}
+
+/* Items */
+.item {
+  margin-bottom: 5px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.5px;
+}
+
+.item-left {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.item-title {
+  font-size: 9.1pt;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.item-role {
+  font-size: 8.5pt;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+.item-tech {
+  font-size: 7.8pt;
+  font-weight: 500;
+  color: #64748b;
+  background: #f8fafc;
+  padding: 0.5px 5px;
+  border-radius: 3px;
+  border: 1px solid #e2e8f0;
+}
+
+.item-date {
+  font-size: 8pt;
+  font-weight: 600;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.item-bullets {
+  list-style: none;
+  padding-left: 0;
+}
+
+.item-bullets li {
+  position: relative;
+  padding-left: 11px;
+  margin-bottom: 2px;
+  color: #334155;
+  font-size: 8.4pt;
+  line-height: 1.34;
+}
+
+.item-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.item-bullets li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: -0.5px;
+  color: #4f46e5;
+  font-size: 8.5pt;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Education Layout */
+.edu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.edu-school {
+  font-size: 9.1pt;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.edu-degree {
+  font-size: 8.4pt;
+  color: #475569;
+  margin-top: 1px;
+}
+
+.edu-courses {
+  font-size: 8pt;
+  color: #64748b;
+  margin-top: 1px;
+}
+
+.edu-courses strong {
+  color: #334155;
+}
+</style>
+</head>
+<body>
+<div class="resume-page">
+  <!-- Header -->
+  <header class="header">
+    <div class="header-top">
+      <h1 class="name">FAHAD WATHIQ MURTADHA</h1>
+      <div class="title-badge">Frontend & Software Engineer</div>
+    </div>
+    <div class="contact-row">
+      <span class="contact-item">📍 Karbala / Samawah, Iraq</span>
+      <span class="dot">•</span>
+      <span class="contact-item">✉️ <a href="mailto:fhadwatek@gmail.com">fhadwatek@gmail.com</a></span>
+      <span class="dot">•</span>
+      <span class="contact-item">📱 +964 782 479 1185</span>
+      <span class="dot">•</span>
+      <span class="contact-item">🌐 <a href="https://fahadwm101.github.io/FAHAD.GITHUP/">Portfolio</a></span>
+      <span class="dot">•</span>
+      <span class="contact-item">💻 <a href="https://github.com/fahadwm101">GitHub</a></span>
+      <span class="dot">•</span>
+      <span class="contact-item">🔗 <a href="https://linkedin.com">LinkedIn</a></span>
+    </div>
+  </header>
+
+  <!-- Summary -->
+  <section class="section">
+    <div class="section-title">
+      <div><span class="accent-bar"></span>Professional Summary</div>
+    </div>
+    <p class="summary-text">
+      Versatile <span class="highlight">Frontend & Software Engineer</span> with an academic Computer Science background at the University of Karbala and 2+ years of project engineering experience. Proven capacity to translate complex organizational workflows into scalable, production-grade applications across healthcare, academic productivity, and hospitality. Combines modern frontend expertise (<span class="highlight">React.js, Next.js, TypeScript, Tailwind CSS</span>) with solid full-stack architecture (<span class="highlight">Python/FastAPI, Flutter, RESTful APIs</span>) to build high-performance, accessible, and user-centric digital products.
+    </p>
+  </section>
+
+  <!-- Technical Skills -->
+  <section class="section">
+    <div class="section-title">
+      <div><span class="accent-bar"></span>Technical Skills</div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <div class="skill-category">Languages</div>
+        <div class="skill-items">JavaScript (ES6+), TypeScript, Python, Dart, C++, C#, PHP, SQL</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-category">Frontend & UI/UX</div>
+        <div class="skill-items">React.js, Next.js, Flutter, Vue.js, Tailwind CSS, HTML5/CSS3, Responsive UI/UX, Component Systems</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-category">Backend & Cloud</div>
+        <div class="skill-items">FastAPI, Laravel, Express.js, Firebase, Supabase, SQLite, PostgreSQL, RESTful APIs</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-category">Tools & DevOps</div>
+        <div class="skill-items">Git, GitHub, Vercel, Google Play Console, Agile/Scrum, Vite, Performance Optimization</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership Experience -->
+  <section class="section">
+    <div class="section-title">
+      <div><span class="accent-bar"></span>Leadership & Engineering Experience</div>
+    </div>
+    <div class="item">
+      <div class="item-header">
+        <div class="item-left">
+          <span class="item-title">R.I.S.E Software Team</span>
+          <span class="item-role">— Founder & Lead Software Engineer</span>
+        </div>
+        <span class="item-date">2025 – Present | Karbala, Iraq</span>
+      </div>
+      <ul class="item-bullets">
+        <li>Founded and lead an engineering collective building real-world digital solutions for educational and organizational sectors.</li>
+        <li>Architected frontend foundations and component libraries across 5+ client applications using React, TypeScript, and Tailwind CSS.</li>
+        <li>Established team-wide engineering practices: Git workflows, peer code reviews, sprint cycles, and automated Vercel CI/CD pipelines.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="section">
+    <div class="section-title">
+      <div><span class="accent-bar"></span>Featured Engineering Projects</div>
+    </div>
+
+    <!-- Project 1: Cura -->
+    <div class="item">
+      <div class="item-header">
+        <div class="item-left">
+          <span class="item-title">Cura</span>
+          <span class="item-role">— Healthcare Patient & Clinic Scheduling Platform</span>
+          <span class="item-tech">React.js • Tailwind CSS • REST APIs</span>
+        </div>
+        <span class="item-date">Production Ready</span>
+      </div>
+      <ul class="item-bullets">
+        <li>Engineered a centralized digital healthcare platform connecting patients with specialized medical clinics, eliminating scheduling friction.</li>
+        <li>Built dynamic doctor admin dashboards and real-time appointment booking workflows with robust validation and sub-second UI transitions.</li>
+        <li>Designed an intuitive, accessible UI prioritizing emergency care discovery, doctor filters, and responsive mobile-first views.</li>
+      </ul>
+    </div>
+
+    <!-- Project 2: APEX Core -->
+    <div class="item">
+      <div class="item-header">
+        <div class="item-left">
+          <span class="item-title">APEX Core</span>
+          <span class="item-role">— Fitness Tracking & Athlete Ecosystem</span>
+          <span class="item-tech">Flutter • Dart • Firebase • Google Play</span>
+        </div>
+        <span class="item-date">Google Play Store</span>
+      </div>
+      <ul class="item-bullets">
+        <li>Developed a cross-platform mobile application in Flutter for workout logging, exercise performance analytics, and custom training routines.</li>
+        <li>Managed complete Google Play deployment lifecycle, successfully meeting all 14-day closed testing cohorts and compliance reviews for public release.</li>
+      </ul>
+    </div>
+
+    <!-- Project 3: R.NOTE -->
+    <div class="item">
+      <div class="item-header">
+        <div class="item-left">
+          <span class="item-title">R.NOTE</span>
+          <span class="item-role">— Student Academic Workspace & Task Hub</span>
+          <span class="item-tech">React.js • Tailwind CSS • Gamification Engine</span>
+        </div>
+        <span class="item-date">Web Application</span>
+      </div>
+      <ul class="item-bullets">
+        <li>Architected an all-in-one student productivity workspace consolidating course timetables, markdown study notes, and assignment trackers.</li>
+        <li>Implemented custom XP gamification logic to incentivize study consistency, accompanied by a zero-flash dark/light theme architecture.</li>
+      </ul>
+    </div>
+
+    <!-- Project 4: Rehla -->
+    <div class="item">
+      <div class="item-header">
+        <div class="item-left">
+          <span class="item-title">Rehla (رحلة)</span>
+          <span class="item-role">— Regional Hotel Reservation Platform</span>
+          <span class="item-tech">Laravel • Vue.js • Flutter • MySQL</span>
+        </div>
+        <span class="item-date">Web & Mobile</span>
+      </div>
+      <ul class="item-bullets">
+        <li>Engineered a localized hospitality reservation engine for Karbala hotels, enabling live room inventory management and seamless customer checkouts.</li>
+      </ul>
+    </div>
+
+    <!-- Project 5: ForensicStyle -->
+    <div class="item">
+      <div class="item-header">
+        <div class="item-left">
+          <span class="item-title">ForensicStyle</span>
+          <span class="item-role">— AI-Powered Forensic Stylometry Tool</span>
+          <span class="item-tech">Python • FastAPI • Scikit-learn</span>
+        </div>
+        <span class="item-date">AI / Backend</span>
+      </div>
+      <ul class="item-bullets">
+        <li>Built an AI text forensics system leveraging machine learning stylometry algorithms to attribute authorship and detect linguistic anomaly patterns.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section" style="margin-bottom: 0;">
+    <div class="section-title">
+      <div><span class="accent-bar"></span>Education</div>
+    </div>
+    <div class="edu-row">
+      <div>
+        <div class="edu-school">University of Karbala</div>
+        <div class="edu-degree"><strong>Bachelor of Science in Computer Science (B.S.)</strong></div>
+        <div class="edu-courses"><strong>Core Coursework:</strong> Data Structures & Algorithms, Software Engineering, Object-Oriented Programming, Database Systems</div>
+      </div>
+      <div style="text-align: right;">
+        <span class="item-date">Karbala, Iraq</span>
+        <div class="item-date" style="color: #4f46e5; font-weight: 700;">Expected Graduation: 2027</div>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

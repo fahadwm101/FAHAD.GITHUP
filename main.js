@@ -11,8 +11,10 @@ const translations = {
     "nav-projects": "Projects",
     "nav-specializations": "Specializations",
     "nav-contact": "Contact",
-    "hero-title": "Hi, I'm CHEETAH",
+    "hero-title": "FAHAD",
+    "hero-role-bold": "Engineer + Frontend Architect",
     "hero-subtitle": "Frontend Software Engineer | Architect",
+    "hero-scroll": "Scroll",
     "hero-p1": "Building scalable, production-ready applications like personal productivity hubs. I transform complex user requirements into high-performance, product-centric web architectures.",
     "hero-p2": "With a rigorous Computer Science foundation from the University of Karbala and 2+ years of professional engineering experience, I specialize in bridging the gap between sophisticated backend logic and intuitive user experiences.",
     "hero-p3": "Product engineering excellence through precision, elegance, and scale.",
@@ -129,8 +131,9 @@ const translations = {
     "whatsapp-subtitle": "Start a direct chat with a prefilled message.",
     "whatsapp-btn": "Chat on WhatsApp",
     "term-btn-stack": "--stack",
-    "term-btn-contact": "--contact",
     "term-btn-bio": "--bio",
+    "term-btn-cv": "--cv",
+    "term-btn-contact": "--contact",
     "term-btn-clear": "--clear"
   },
   ar: {
@@ -139,8 +142,10 @@ const translations = {
     "nav-projects": "المشاريع",
     "nav-specializations": "التخصصات",
     "nav-contact": "تواصل معي",
-    "hero-title": "مرحباً، أنا CHEETAH",
+    "hero-title": "FAHAD",
+    "hero-role-bold": "مهندس برمجيات + معمار واجهات",
     "hero-subtitle": "مهندس برمجيات | متخصص واجهات أمامية",
+    "hero-scroll": "تمرير",
     "hero-p1": "بناء تطبيقات قابلة للتوسع وجاهزة للإنتاج مثل مراكز الإنتاجية الشخصية. أقوم بتحويل متطلبات المستخدم المعقدة إلى بنى ويب عالية الأداء تركز على المنتج.",
     "hero-p2": "مع أساس متين في علوم الحاسوب من جامعة كربلاء وخبرة هندسية مهنية تزيد عن سنتين، أتخصص في سد الفجوة بين منطق الخلفية المتطور وتجارب المستخدم البديهية.",
     "hero-p3": "التميز في هندسة المنتجات من خلال الدقة، الأناقة وقابلية التوسع.",
@@ -257,8 +262,9 @@ const translations = {
     "whatsapp-subtitle": "تواصل معي مباشرة برسالة جاهزة بضغطة زر.",
     "whatsapp-btn": "مراسلة عبر واتساب",
     "term-btn-stack": "--التقنيات",
-    "term-btn-contact": "--التواصل",
     "term-btn-bio": "--السيرة",
+    "term-btn-cv": "--السيرة_الذاتية",
+    "term-btn-contact": "--التواصل",
     "term-btn-clear": "--مسح"
   }
 };
@@ -313,8 +319,20 @@ function updateLanguage(lang) {
   // Update dynamic links & clock language
   updateWhatsAppLink();
   updateLiveClock();
+  updateCvLink(lang);
 
   localStorage.setItem('preferredLanguage', lang);
+}
+
+function updateCvLink(lang) {
+  const resumeBtn = document.getElementById('hero-resume-btn');
+  if (resumeBtn) {
+    if (lang === 'ar') {
+      resumeBtn.href = 'Fahad_Wathiq_CV_Arabic.pdf';
+    } else {
+      resumeBtn.href = 'Fahad_Wathiq_Frontend_Engineer_CV.pdf';
+    }
+  }
 }
 
 function toggleLanguage() {
@@ -487,10 +505,10 @@ function runTerminalCmd(cmd) {
     outputHTML = `
       <div class="terminal-line"><span class="prompt">cheetah@karbala:~$</span> <span class="cmd">fahad --stack</span></div>
       <div class="terminal-output">
-        <span class="out-key">languages:</span> <span class="out-str">["JavaScript (ES6+)", "TypeScript", "Python", "C++"]</span><br>
-        <span class="out-key">frameworks:</span> <span class="out-arr">["React", "Next.js", "Tailwind CSS", "Redux/Zustand"]</span><br>
-        <span class="out-key">backend&cloud:</span> <span class="out-str">["Node.js", "Firebase/Firestore", "REST APIs", "Cloudflare"]</span><br>
-        <span class="out-key">engineering:</span> <span class="out-green">["Component Systems", "Real-Time Sync", "Web Performance"]</span>
+        <span class="out-key">languages:</span> <span class="out-str">["TypeScript", "JavaScript (ES6+)", "Python", "Dart", "C++", "C#", "PHP", "SQL"]</span><br>
+        <span class="out-key">frontend&mobile:</span> <span class="out-arr">["React.js", "Next.js", "Flutter", "Vue.js", "Tailwind CSS", "UI/UX"]</span><br>
+        <span class="out-key">backend&cloud:</span> <span class="out-str">["FastAPI", "Laravel", "Express.js", "Firebase", "Supabase", "PostgreSQL", "SQLite"]</span><br>
+        <span class="out-key">devops&tools:</span> <span class="out-green">["Git", "GitHub", "Vercel", "Google Play Console", "Agile/Scrum", "Vite"]</span>
       </div>
     `;
   } else if (cmd === 'contact') {
@@ -508,9 +526,19 @@ function runTerminalCmd(cmd) {
       <div class="terminal-line"><span class="prompt">cheetah@karbala:~$</span> <span class="cmd">fahad --bio</span></div>
       <div class="terminal-output">
         <span class="out-key">name:</span> <span class="out-str">"Fahad Wathiq (CHEETAH)"</span><br>
-        <span class="out-key">education:</span> <span class="out-str">"B.Sc. Computer Science - University of Karbala"</span><br>
-        <span class="out-key">specialty:</span> <span class="out-arr">"Frontend Architecture & Product Engineering"</span><br>
-        <span class="out-key">status:</span> <span class="out-green">"Available for High-Impact Projects"</span>
+        <span class="out-key">education:</span> <span class="out-str">"B.Sc. Computer Science - University of Karbala (2027)"</span><br>
+        <span class="out-key">specialty:</span> <span class="out-arr">"Frontend Architecture & Software Engineering"</span><br>
+        <span class="out-key">leadership:</span> <span class="out-str">"Founder & Lead Engineer at R.I.S.E Software Team"</span><br>
+        <span class="out-key">status:</span> <span class="out-green">"Available for High-Impact Projects & Remote Roles"</span>
+      </div>
+    `;
+  } else if (cmd === 'cv') {
+    outputHTML = `
+      <div class="terminal-line"><span class="prompt">cheetah@karbala:~$</span> <span class="cmd">fahad --cv</span></div>
+      <div class="terminal-output">
+        <span class="out-key">status:</span> <span class="out-green">"1-Page Vector Formats (A4 Verified)"</span><br>
+        <span class="out-key">english_ats:</span> <a href="Fahad_Wathiq_Frontend_Engineer_CV.pdf" target="_blank" rel="noopener noreferrer" class="out-str" style="text-decoration:underline;">[Download English CV (ATS Standard)]</a><br>
+        <span class="out-key">arabic_exec:</span> <a href="Fahad_Wathiq_CV_Arabic.pdf" target="_blank" rel="noopener noreferrer" class="out-arr" style="text-decoration:underline;">[تحميل السيرة الذاتية (عربي)]</a>
       </div>
     `;
   }
@@ -679,12 +707,21 @@ if (contactForm) {
     const name = contactForm.querySelector('[name="user_name"]').value.trim();
     const email = contactForm.querySelector('[name="user_email"]').value.trim();
     const message = contactForm.querySelector('[name="message"]').value.trim();
-
-    if (!name || !email || !message) return;
-
     const currentLang = localStorage.getItem('preferredLanguage') || 'en';
-    const successMsg = translations[currentLang]["toast-success"] || "Thank you! Your message has been prepared.";
 
+    // Strict Validation (Phase 2 Rule)
+    if (!name || !email || !message) {
+      showToast(currentLang === 'ar' ? 'يرجى ملء جميع الحقول المطلوبة' : 'Please complete all required fields.');
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      showToast(currentLang === 'ar' ? 'يرجى كتابة بريد إلكتروني صحيح' : 'Please enter a valid email address.');
+      return;
+    }
+
+    const successMsg = translations[currentLang]["toast-success"] || "Thank you! Your message has been prepared.";
     showToast(successMsg);
 
     const mailtoSubject = encodeURIComponent(`Inquiry from ${name} via Portfolio`);
@@ -701,6 +738,14 @@ if (contactForm) {
 document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('preferredLanguage') || 'en';
   updateLanguage(savedLang);
+
+  // Asset Fallback Handling (Phase 3 Rule)
+  document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('error', function() {
+      this.style.opacity = '0.75';
+      this.setAttribute('data-failed', 'true');
+    });
+  });
 
   type();
   initProjectFilters();
