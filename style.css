@@ -1961,6 +1961,31 @@ hr {
   text-align: right;
 }
 
+[dir="rtl"] .hero-name-title {
+  direction: rtl;
+  font-family: 'IBM Plex Sans Arabic', 'Cairo', sans-serif !important;
+  text-transform: none;
+  letter-spacing: normal;
+  gap: 10px;
+}
+
+[dir="rtl"] .hero-name-stroke {
+  color: #FFFFFF;
+  -webkit-text-stroke: 0;
+  text-stroke: 0;
+  letter-spacing: normal;
+  font-family: 'IBM Plex Sans Arabic', 'Cairo', sans-serif !important;
+}
+
+[dir="rtl"] .hero-name-solid {
+  background: linear-gradient(135deg, #FFFFFF 25%, #FF473A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: normal;
+  font-family: 'IBM Plex Sans Arabic', 'Cairo', sans-serif !important;
+}
+
 [dir="rtl"] .btnn,
 [dir="rtl"] .follow,
 [dir="rtl"] .btns {
@@ -2216,6 +2241,11 @@ hr {
     min-height: 1.8rem;
     font-size: 1rem;
     margin-bottom: 10px;
+  }
+
+  [dir="rtl"] .hero-name-title {
+    justify-content: center;
+    text-align: center;
   }
 
   [dir="rtl"] .hero-role-typing {
